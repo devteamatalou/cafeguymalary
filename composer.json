@@ -1,0 +1,15 @@
+{
+    "name": "devteam/ataschool",
+    "autoload": {
+        "psr-4": {
+            "src\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "DevTeam",
+            "email": "devteamatalou@gmail.com"
+        }
+    ],
+    "require": {}
+}
