@@ -1,0 +1,144 @@
+body {
+	font-family:'Times New Roman', Times;
+	margin: 0;
+	padding: 0;
+	background-color: #f5f5f5;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+.restaurant-logo {
+	display: flex;
+	align-items: center;
+}
+
+.resto-logo {
+	display: flex;
+	align-items: center;
+	margin-bottom: 20px;
+}
+
+.resto-logo img {
+	width: 200px;
+	height: 200px;
+	margin: auto;
+}
+
+.restaurant-logo h1 {
+	font-size: 50px;
+	margin: 0;
+}
+
+h3 {
+    font-size: 35px; 
+    color: #0077b6;
+    font-weight: bold; 
+}
+
+.logout {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+}
+
+.logout a {
+	text-decoration: none;
+	color: black;
+	padding: 8px 16px;
+	border-radius: 4px;
+	transition: background-color 0.3s;
+}
+
+.logout img {
+	width: 40px;
+	height: 40px;
+	text-decoration: none;
+	margin: auto;
+}
+
+.logout a:hover {
+	background-color: red;
+	color: white;
+}
+
+main {
+	padding: 20px;
+}
+
+#load-data {
+	align-items: center;
+}
+
+/*------------------- #Footer --------------------------*/
+#footer {
+	padding: 15px;
+	color: #000;
+	font-size: 14px;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 9999;
+	background: #afc4df;
+}
+
+#footer .copyright {
+	text-align: center;
+}
+
+#footer .credits {
+	padding-top: 5px;
+	text-align: center;
+	font-size: 13px;
+	color: #000;
+}
+
+
+/* Styles pour les écrans de taille moyenne (par exemple, tablettes) */
+@media screen and (max-width: 1023px) {
+	header {
+		display: block;
+	}
+
+	.restaurant-logo h1 {
+		font-size: 25px;
+	}
+
+	.resto-logo img {
+		width: 125px;
+		height: 125px;
+	}
+
+	.restaurant-logo {
+		text-align: center;
+		margin-top: 10px;
+	}
+
+	h3 {
+		font-size: 22px; 
+		text-align: center;
+	}
+
+}
+
+/* Styles pour les petits écrans (par exemple, smartphones) */
+@media screen and (max-width: 767px) {
+	.resto-logo img {
+		width: 90px;
+		height: 90px;
+	}
+
+	.restaurant-logo h1 {
+		font-size: 20px;
+	}
+
+	h3 {
+		font-size: 18px; 
+		text-align: center;
+	}
+
+}
