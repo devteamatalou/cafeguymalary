@@ -3,7 +3,6 @@ $(document).ready(() => {
 		e.preventDefault();
 		var dataForm = $('#login')[0];
 		var formData = new FormData(dataForm);
-		//console.log(file_data)
 		$.ajax({
 			url: 'http://localhost/cafeguymalary/src/controllers/auth/login.ctrl.php',
 			type: "POST",

@@ -4,7 +4,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Login | Caféteria Guy Malary</title>
-		<link href="../../assets/css/styleLogin.css" rel="stylesheet">
+		<link href="../../public/assets/css/styles.css" rel="stylesheet">
 		<!-- cdn Icon bootstrap -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
@@ -12,7 +12,7 @@
 	<body>
 		<div class="container-login">
 			<div class="item">
-				<img src="../../assets/img/bgc1.png" alt="">
+				<img src="../../public/assets/img/bgc1.png" alt="">
 			</div>
 			<div class="item">
 				<form id="login" action="" method="post">
