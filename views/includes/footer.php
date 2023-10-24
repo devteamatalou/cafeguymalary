@@ -1,0 +1,43 @@
+		<footer id="footer" class="footer">
+			<div class="credits">
+				Designed by <a href="">Atalou Micro System</a>
+			</div>
+		</footer>
+		<!-- End Footer -->
+		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+		<!-- Vendor JS Files -->
+		<script src="../../public/vendor/apexcharts/apexcharts.min.js"></script>
+		<script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../../public/vendor/chart.js/chart.min.js"></script>
+		<script src="../../public/vendor/echarts/echarts.min.js"></script>
+		<script src="../../public/vendor/quill/quill.min.js"></script>
+		<script src="../../public/vendor/simple-datatables/simple-datatables.js"></script>
+		<script src="../../public/vendor/tinymce/tinymce.min.js"></script>
+		<script src="../../public/vendor/php-email-form/validate.js"></script>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<!-- dd -->
+		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+		<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
+		<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
+		<!--JS File -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/app.js"></script>
+
+		<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" />
+		<link href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css" rel="stylesheet" />
+		<link href="https://cdn.datatables.net/responsive/2.4.1/css/responsive.bootstrap5.min.css" rel="stylesheet" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/2.5.0/jszip.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.3.6/js/dataTables.buttons.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.bootstrap5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
+		<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
+		<script src="https://cdn.datatables.net/datetime/1.4.0/js/dataTables.dateTime.min.js"></script>
+	</body>
+</html>
