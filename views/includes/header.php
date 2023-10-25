@@ -62,10 +62,10 @@
 					</li>
 					<!-- end date -->
 
-					<li class="nav-item dropdown">
+					<!-- <li class="nav-item dropdown">
 						<a href="#calculateModal" class="nav-link nav-icon" data-toggle="modal">
 							<i class="bi bi-calculator" data-toggle="tooltip" title="Calculator"></i></a>
-					</li>
+					</li> -->
 					<!-- End Calculator Nav -->
 
 					<li class="nav-item dropdown pe-3">
