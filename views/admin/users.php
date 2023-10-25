@@ -10,6 +10,8 @@
 		$userdao = new UserDao();
 		$select_all_users = $userdao->selectAllUsers();
 
+		$allroles_stmt = $userdao->selectAllRoles();
+
 
 	include '../includes/header.php';
 	include '../includes/sidebar.php';
@@ -75,27 +77,40 @@
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<form>
+						<form id="adduser" action="" method="post">
 							<div class="modal-header">
-								<h4 class="modal-title">Add Employee</h4>
+								<h4 class="modal-title">Add User</h4>
 								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
 							</div>
 							<div class="modal-body">
 								<div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" required>
+									<label>Firstname</label>
+									<input name="fname" type="text" class="form-control" required>
 								</div>
 								<div class="form-group">
-									<label>Email</label>
-									<input type="email" class="form-control" required>
+									<label>Lastname</label>
+									<input name="lname" type="text" class="form-control" required>
 								</div>
 								<div class="form-group">
-									<label>Address</label>
-									<textarea class="form-control" required></textarea>
+									<label>Username</label>
+									<input name="uname" type="text" class="form-control" required/>
 								</div>
 								<div class="form-group">
-									<label>Phone</label>
-									<input type="text" class="form-control" required>
+									<label>Role</label>
+									<select name="role" class="form-select" required>
+										<option disabled selected>---- Select Role ----</option>
+										<?php
+										 while($allroles = $allroles_stmt->fetch(PDO::FETCH_OBJ)):
+										?>
+										  <option value="<?= $allroles->id; ?>"><?= $allroles->nom; ?></option>
+										<?php
+										 endwhile;
+										?>
+									</select>
+								</div>
+								<div class="form-group">
+									<label>Default Password</label>
+									<input name="default_pass" type="password" class="form-control" required>
 								</div>
 							</div>
 							<div class="modal-footer">
