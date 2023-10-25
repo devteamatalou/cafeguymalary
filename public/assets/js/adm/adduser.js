@@ -1,6 +1,9 @@
 $(document).ready(() => {
 	$('#adduser').submit((e) => {
 		e.preventDefault();
+
+		// alert('FOUND!!!!');
+
 		var dataForm = $('#adduser')[0];
 		var formData = new FormData(dataForm);
 		$.ajax({
@@ -49,6 +52,6 @@ $(document).ready(() => {
 					}).showToast();
 				}
 			}
-		})
-	})
-})
+		});
+	});
+});

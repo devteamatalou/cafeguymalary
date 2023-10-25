@@ -7,29 +7,30 @@
 		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 		<!-- Form Js links -->
-		<script></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/adm/adduser.js"></script>
 
 		<!-- Vendor JS Files -->
-		<script src="../../public/vendor/apexcharts/apexcharts.min.js"></script>
-		<script src="../../public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="../../public/vendor/chart.js/chart.min.js"></script>
-		<script src="../../public/vendor/echarts/echarts.min.js"></script>
-		<script src="../../public/vendor/quill/quill.min.js"></script>
-		<script src="../../public/vendor/simple-datatables/simple-datatables.js"></script>
-		<script src="../../public/vendor/tinymce/tinymce.min.js"></script>
-		<script src="../../public/vendor/php-email-form/validate.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/apexcharts/apexcharts.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/chart.js/chart.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/echarts/echarts.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/quill/quill.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/simple-datatables/simple-datatables.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/tinymce/tinymce.min.js"></script>
+		<script src="http://localhost/cafeguymalary/public/vendor/php-email-form/validate.js"></script>
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 		<!-- dd -->
-		<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
 		<!--JS File -->
-		<script src="../../public/assets/js/main.js"></script>
-		<script src="../../public/assets/js/app.js"></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/main.js"></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/app.js"></script>
 
 		<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" />
 		<link href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css" rel="stylesheet" />
