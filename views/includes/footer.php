@@ -25,8 +25,8 @@
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
 		<!--JS File -->
-		<script src="assets/js/main.js"></script>
-		<script src="assets/js/app.js"></script>
+		<script src="../../public/assets/js/main.js"></script>
+		<script src="../../public/assets/js/app.js"></script>
 
 		<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" />
 		<link href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css" rel="stylesheet" />

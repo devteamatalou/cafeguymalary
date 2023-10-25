@@ -5,6 +5,11 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Login | Caféteria Guy Malary</title>
 		<link href="../../public/assets/css/styles.css" rel="stylesheet">
+
+		<!-- tab icon -->
+		<link href="../../public/assets/img/logo_resto.png" rel="icon">
+		<link href="../../public/assets/img/logo_resto.png" rel="apple-touch-icon">
+
 		<!-- cdn Icon bootstrap -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">

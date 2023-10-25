@@ -35,7 +35,7 @@
 		<header id="header" class="header fixed-top d-flex align-items-center">
 			<div class="d-flex align-items-center justify-content-between">
 				<a href="index.html" class="logo d-flex align-items-center">
-					<img src="logo_ata-e1617114752787.png" alt="">
+					<!-- <img src="../../public/assets/img/bgc1.png" alt=""> -->
 					<span class="d-none d-lg-block">Guy Malary Caféteria</span>
 				</a>
 				<i class="bi bi-list toggle-sidebar-btn"></i>
@@ -62,15 +62,6 @@
 					</li>
 					<!-- end date -->
 
-					<li class="nav-item">
-						<a class="nav-link nav-icon" href="index.html"><i class="bi bi-grid"></i></a>
-					</li>
-					<!-- End Dashboard Nav -->
-
-					<li class="nav-item">
-						<a class="nav-link nav-icon" href="pos.html"><i class="bi bi-menu-button-wide"></i></a>
-					</li>
-					<!-- End Pos Nav -->
 					<li class="nav-item dropdown">
 						<a href="#calculateModal" class="nav-link nav-icon" data-toggle="modal">
 							<i class="bi bi-calculator" data-toggle="tooltip" title="Calculator"></i></a>
@@ -79,7 +70,7 @@
 
 					<li class="nav-item dropdown pe-3">
 						<a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-							<img src="assets/img/male.png" alt="Profile" class="rounded-circle">
+							<img src="../../public/assets/img/default-icon.png" alt="Profile" class="rounded-circle">
 						</a>
 						<!-- End Profile Iamge Icon -->
 
