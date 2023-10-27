@@ -38,6 +38,18 @@
 			</ul>
 		</li><!-- End section employe  -->
 
+		<!-- Start section employe -->
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#checkin-nav" data-bs-toggle="collapse" href="#">
+				<i class="bi bi-check"></i><span>Checkin</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="checkin-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/checkin.php"><i class="bi bi-circle"></i><span>Go to Cafeteria</span></a>
+				</li>
+			</ul>
+		</li><!-- End section employe  -->
+
 		<li class="nav-item">
 			<a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
 				<i class="bi bi-journal-album"></i><span>Report</span><i class="bi bi-chevron-down ms-auto"></i>

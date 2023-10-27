@@ -15,8 +15,6 @@ if (isset($_POST['code'])) {
 
 	if ($query->rowCount() > 0) {
 		foreach ($query as $rows) {
-			// $img_path = $rows['photo_path'];
-			$img_path = 'default-icon.png';
 			$fname = $rows['prenom'];
 			$lname = $rows['nom'];
 			$lname = strtoupper($lname);
@@ -67,6 +65,7 @@ if (isset($_POST['code'])) {
 	}
 }
 
+// those 4 lines allow you to send either the echo message either the audiopath to the ajax response
 $result = [
 	'html' => ob_get_clean(), // Capture the echoed HTML
 	'audiopath' => $audiopath,

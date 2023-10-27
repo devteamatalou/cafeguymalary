@@ -1,45 +1,54 @@
+<?php
+ session_start();
+
+	if(empty($_SESSION['admin']))
+		header('Location: login.php');
+
+	include '../../vendor/autoload.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Restaurant Interface</title>
-	<link rel="stylesheet" href="assets/css/styles.css">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-	<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-	<!-- google font -->
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Restaurant Interface</title>
+		<link rel="stylesheet" href="../../public/assets/css/styles.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+		<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		<!-- google font -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	</head>
 
-<body>
-	<header>
-		<div class="resto-logo">
-			<img src="assets/img/logo_resto.png" alt="Restaurant Logo">
-		</div>
-		<div class="restaurant-logo">
-			<h1>Les Délices D'Edelande Restaurant</h1>
-		</div>
-		<div id="load-data"> </div>
-	</header>
-
-	<footer id="footer">
-		<div class="container">
-			<div class="copyright">
-				&copy; Copyright <strong><span>AAN</span></strong>
+	<body>
+		<header>
+			<div class="resto-logo">
+				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
 			</div>
-			<div class="credits">
-				Designed by <strong><span>Atalou Micro System</span></strong></strong>
+			<div class="restaurant-logo">
+				<h1>Les Délices D'Edelande Restaurant</h1>
 			</div>
-		</div>
-	</footer>
-</body>
+			<div id="load-data"> </div>
+		</header>
 
+		<footer id="footer">
+			<div class="container">
+				<div class="copyright">
+					&copy; Copyright <strong><span>AAN</span></strong>
+				</div>
+				<div class="credits">
+					Designed by <strong><span>Atalou Micro System</span></strong></strong>
+				</div>
+			</div>
+		</footer>
+	</body>
+	
+	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 </html>
 
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 <script>
 	const url = 'ws://broker.emqx.io:8083/mqtt';
@@ -48,7 +57,7 @@
 	const options = {
 		// Clean session
 		clean: true,
-		connectTimeout: 20000,
+		connectTimeout: 10000,
 		// Authentication
 		clientId: 'emqx_test',
 		username: 'emqx_test',
@@ -71,15 +80,13 @@
 
 		// ------- <ADDED> --------
 		$(document).ready(function() {
-			var code = message.toString();
+			var barcode = message.toString();
 			$.ajax({
-				url: "action.php",
+				url: "../../src/controllers/checkin/checkin.ctrl.php",
 				type: "post",
-				data: {
-					code: code
-				},
-				success: function(result) {
-
+				data: {barcode: barcode},
+				success: function(result)
+				{
 					let renderedHtml = result.html;
 					var audioPath = result.audiopath;
 
@@ -110,6 +117,6 @@
 
 	// the function to put default interface design
 	function homeDisplay() {
-		$("#load-data").html("<div class='logout'><img src='assets/img/deconnecter.png'><p><a href='#'>Déconnexion</a></p></div>");
+		$("#load-data").html("<div class='logout'><img src='../../public/assets/img/deconnecter.png'><p><a id='bt-test' href='index.php'>Déconnexion</a></p></div>");
 	}
 </script>
