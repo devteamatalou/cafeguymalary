@@ -19,9 +19,6 @@
 
 		if($checkinDao->checkUserExits($barcode))
 		{
-			// $exists_response = $checkinDao->checkUserExits($barcode);
-			// while($isexists = $exists_response->fetch(PDO::FETCH_OBJ))
-			// {
 				$id_emp = $checkinDao->employeeInfo($barcode)->id;
 				$fname = $checkinDao->employeeInfo($barcode)->prenom;
 				$lname = $checkinDao->employeeInfo($barcode)->nom;

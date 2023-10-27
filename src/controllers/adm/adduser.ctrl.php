@@ -9,10 +9,10 @@
 	if ($_POST)
 	{
 		extract($_POST);
-		$id_role = htmlspecialchars($id_role);
+		$id_role = htmlspecialchars($role);
 		$fname = htmlspecialchars($fname);
 		$lname = str_replace(' ', '', htmlspecialchars($lname));
-		$username = str_replace(' ', '', htmlspecialchars($username));
+		$username = str_replace(' ', '', htmlspecialchars($uname));
 		$auth = htmlspecialchars($default_pass);
 		$pswd_hash = password_hash($default_pass, PASSWORD_DEFAULT);
 
