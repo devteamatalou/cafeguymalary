@@ -9,6 +9,9 @@
 		<!-- Form Js links -->
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/adduser.js"></script>
 
+		<!-- Js link for running time -->
+		<script src="http://localhost/cafeguymalary/public/assets/js/time/runningtime.js"></script>
+
 		<!-- Vendor JS Files -->
 		<script src="http://localhost/cafeguymalary/public/vendor/apexcharts/apexcharts.min.js"></script>
 		<script src="http://localhost/cafeguymalary/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

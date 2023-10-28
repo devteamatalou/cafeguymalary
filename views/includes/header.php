@@ -60,7 +60,7 @@
 
 					<!-- date -->
 					<li class="nav-item">
-						<a href="#" class="nav-link nav-icon  heures"></a>
+						<span id="time" class="nav-link nav-icon"></span>
 					</li>
 					<!-- end date -->
 
