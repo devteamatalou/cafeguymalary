@@ -85,5 +85,9 @@
 				</li>
 			</ul>
 		</li>
+
+		<p style="margin-top: 50px; text-align: center;">
+			<img width="100" height="150" src="http://localhost/cafeguymalary/public/assets/img/female-chef.png" alt="">
+		</p>
 	</ul>
 </aside><!-- End Sidebar-->
