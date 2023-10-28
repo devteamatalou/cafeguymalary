@@ -32,10 +32,8 @@
 
 			<div class="row">
 				<div class="col-md-12">
-
 					<div class="">
 						<div class="">
-
 							<table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
 								<thead>
 									<tr>
@@ -96,7 +94,6 @@
 								<div class="form-group">
 									<label>Gender</label>
 									<select name="gender" class="form-select" required>
-										<option disabled selected>---- Select Gender ----</option>
 										<option value="M">M</option>
 										<option value="F">F</option>
 									</select>
@@ -169,4 +166,4 @@
 		</section>
 	</main>
 
-	<?php include '../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>

@@ -21,14 +21,13 @@
 			return $allemps_qry;
 		}
 
-		// function addEmp($id_role, $firstname, $lastname, $username, $auth)
-		// {
-		// 	$adduser_qry = $this->Auth->prepare("INSERT INTO `users` (`id_role`, `prenom`, `nom`, `username`, `password`) VALUES (:id_role, :firstname, :lastname, :username, :auth)");
-		// 	$adduser_qry->execute([':id_role' => $id_role, ':firstname' => $firstname, ':lastname' => $lastname, ':username' => $username, ':auth' => $auth]);
-		// 	if($adduser_qry->rowCount() > 0)
-		// 	 return true;
-		// 	else
-		// 	 return false;
-		// }
+		function addEmp($fname, $lname, $gender, $barcode, $created_at)
+		{
+			$addemp_qry = $this->Auth->prepare("INSERT INTO `employee` (`prenom`, `nom`, `sexe`, `barcode`, `created_at`) VALUES (:prenom, :nom, :sexe, :barcode, :created_at)");
+			$addemp_qry->execute([':prenom' => $fname, ':nom' => $lname, ':sexe' => $gender, ':barcode' => $barcode, ':created_at' => $created_at]);
+
+			if($addemp_qry->rowCount() > 0)
+			 return true;
+		}
 	}
 ?>

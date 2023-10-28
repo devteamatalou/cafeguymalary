@@ -98,7 +98,6 @@
 								<div class="form-group">
 									<label>Role</label>
 									<select name="role" class="form-select" required>
-										<option disabled selected>---- Select Role ----</option>
 										<?php
 										 while($allroles = $allroles_stmt->fetch(PDO::FETCH_OBJ)):
 										?>
