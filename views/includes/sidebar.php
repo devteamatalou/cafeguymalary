@@ -2,7 +2,7 @@
 	<ul class="sidebar-nav" id="sidebar-nav">
 
 		<li class="nav-item">
-			<a class="nav-link" href="index.html" style="margin-bottom: 30px;">
+			<a class="nav-link" href="http://localhost/cafeguymalary/views/admin" style="margin-bottom: 30px;">
 				<i class="bi bi-grid"></i>
 				<span>Dashboard</span>
 			</a>
@@ -18,7 +18,7 @@
 					<!-- <a href="users.html"><i class="bi bi-circle"></i><span>Add User</span></a> -->
 				</li>
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/users.php"><i class="bi bi-circle"></i><span>List User</span></a>
+					<a href="http://localhost/cafeguymalary/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
 				</li>
 			</ul>
 		</li><!-- End user Nav -->
@@ -30,10 +30,7 @@
 			</a>
 			<ul id="employe-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="users.html"><i class="bi bi-circle"></i><span>Add Employe</span></a>
-				</li>
-				<li>
-					<a href="users.html"><i class="bi bi-circle"></i><span>List Employe</span></a>
+				<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
 				</li>
 			</ul>
 		</li><!-- End section employe  -->

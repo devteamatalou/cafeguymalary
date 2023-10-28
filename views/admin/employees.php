@@ -6,12 +6,9 @@
 
 		include '../../vendor/autoload.php';
 
-		use src\dao\UserDao;
-		$userdao = new UserDao();
-		$select_all_users = $userdao->selectAllUsers();
-
-		$allroles_stmt = $userdao->selectAllRoles();
-
+		use src\dao\EmpDao;
+		$empdao = new EmpDao();
+		$select_all_emps = $empdao->selectAllEmps();
 
 	include '../includes/header.php';
 	include '../includes/sidebar.php';
@@ -19,18 +16,17 @@
 
 	<main id="main" class="main">
 		<div class="pagetitle">
-			<!-- <h1>Category</h1> -->
 			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="../admin/">Home</a></li>
-					<li class="breadcrumb-item active">Users</li>
+					<li class="breadcrumb-item active">Employees</li>
 				</ol>
 			</nav>
 		</div><!-- End Page Title -->
 		<section class="section">
 			<div class="row mb-3">
 				<div class="col-md-12">
-					<a href="#form" class="btn btn-primary pull-right" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Users</span></a>
+					<a href="#form" class="btn btn-primary pull-right" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Employee</span></a>
 				</div>
 			</div>
 
@@ -39,26 +35,28 @@
 
 					<div class="">
 						<div class="">
-							<!-- <a href="#form" class="btn btn-success" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Category</span></a> -->
+
 							<table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
 								<thead>
 									<tr>
 										<th>Firstname</th>
 										<th>Lastname</th>
-										<th>Username</th>
-										<th>Role</th>
+										<th>Sex</th>
+										<th>Barcode</th>
+										<th>Dated Created</th>
 										<th>Action</th>
 									</tr>
 								</thead>
 								<tbody>
 									<?php
-									 while($allusers = $select_all_users->fetch(PDO::FETCH_OBJ)):
+									 while($allemps = $select_all_emps->fetch(PDO::FETCH_OBJ)):
 									?>
 										<tr>
-											<td><?= $allusers->prenom; ?></td>
-											<td><?= $allusers->nom; ?></td>
-											<td><?= $allusers->username; ?></td>
-											<td><?= $allusers->task; ?></td>
+											<td><?= $allemps->prenom; ?></td>
+											<td><?= $allemps->nom; ?></td>
+											<td><?= $allemps->sexe; ?></td>
+											<td><?= $allemps->barcode; ?></td>
+											<td><?= $allemps->created_at; ?></td>
 											<td>
 												<a href="#editCategoryModal" class="btn btn-success" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></a>
 												<a href="#deleteCategoryModal" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
@@ -77,9 +75,9 @@
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<form id="adduser" action="" method="post">
+						<form id="addemp" action="" method="post">
 							<div class="modal-header">
-								<h4 class="modal-title">Add User</h4>
+								<h4 class="modal-title">Add Employee</h4>
 								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
 							</div>
 							<div class="modal-body">
@@ -92,25 +90,16 @@
 									<input name="lname" type="text" class="form-control" required>
 								</div>
 								<div class="form-group">
-									<label>Username</label>
-									<input name="uname" type="text" class="form-control" required/>
+									<label>Barcode</label>
+									<input name="barcode" type="text" class="form-control" required/>
 								</div>
 								<div class="form-group">
-									<label>Role</label>
-									<select name="role" class="form-select" required>
-										<option disabled selected>---- Select Role ----</option>
-										<?php
-										 while($allroles = $allroles_stmt->fetch(PDO::FETCH_OBJ)):
-										?>
-										  <option value="<?= $allroles->id; ?>"><?= $allroles->nom; ?></option>
-										<?php
-										 endwhile;
-										?>
+									<label>Gender</label>
+									<select name="gender" class="form-select" required>
+										<option disabled selected>---- Select Gender ----</option>
+										<option value="M">M</option>
+										<option value="F">F</option>
 									</select>
-								</div>
-								<div class="form-group">
-									<label>Default Password</label>
-									<input name="default_pass" type="password" class="form-control" required>
 								</div>
 							</div>
 							<div class="modal-footer">

@@ -8,8 +8,8 @@
 		<meta content="" name="keywords">
 
 		<!-- Favicons -->
-		<link href="assets/img/nokad.png" rel="icon">
-		<link href="assets/img/nokad.png" rel="apple-touch-icon">
+		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
+		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
 
 		<!-- Google Fonts -->
 		<link href="https://fonts.gstatic.com" rel="preconnect">
@@ -43,12 +43,13 @@
 				<i class="bi bi-list toggle-sidebar-btn"></i>
 			</div><!-- End Logo -->
 
-			<div class="search-bar">
+			<!-- <div class="search-bar">
 				<form class="search-form d-flex align-items-center" method="POST" action="#">
 					<input type="text" name="query" placeholder="Search" title="Enter search keyword">
 					<button type="submit" title="Search"><i class="bi bi-search"></i></button>
 				</form>
-			</div><!-- End Search Bar -->
+			</div> -->
+			<!-- End Search Bar -->
 
 			<nav class="header-nav ms-auto">
 				<ul class="d-flex align-items-center">
@@ -64,10 +65,10 @@
 					</li>
 					<!-- end date -->
 
-					<!-- <li class="nav-item dropdown">
+					<li class="nav-item dropdown">
 						<a href="#calculateModal" class="nav-link nav-icon" data-toggle="modal">
 							<i class="bi bi-calculator" data-toggle="tooltip" title="Calculator"></i></a>
-					</li> -->
+					</li>
 					<!-- End Calculator Nav -->
 
 					<li class="nav-item dropdown pe-3">
