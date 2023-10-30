@@ -53,38 +53,13 @@
 			</a>
 			<ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="#"><i class="bi bi-circle"></i><span> Report Daily</span></a>
+					<a href="http://localhost/cafeguymalary/views/admin/dailyrep.php"><i class="bi bi-circle"></i><span>Daily Report</span></a>
 				</li>
 				<li>
-					<a href="#"><i class="bi bi-circle"></i><span> Report Global </span></a>
+					<a href="http://localhost/cafeguymalary/views/admin/globalrep.php"><i class="bi bi-circle"></i><span>Global Report</span></a>
 				</li>
 			</ul>
 		</li><!-- End Charts Nav -->
-
-		<li class="nav-item">
-			<a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-				<i class="bi bi-gear"></i><span>Settings</span><i class="bi bi-chevron-down ms-auto"></i>
-			</a>
-			<ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-				<li>
-					<a href="login.html">
-						<i class="bi bi-circle"></i><span>Login</span>
-					</a>
-				</li>
-
-				<li>
-					<a href="users-profile.html">
-						<i class="bi bi-circle"></i><span>Profil </span>
-					</a>
-				</li>
-
-				<li>
-					<a href="login.html">
-						<i class="bi bi-circle"></i><span>logout</span>
-					</a>
-				</li>
-			</ul>
-		</li>
 
 		<p style="margin-top: 50px; text-align: center;">
 			<img width="100" height="150" src="http://localhost/cafeguymalary/public/assets/img/female-chef.png" alt="">

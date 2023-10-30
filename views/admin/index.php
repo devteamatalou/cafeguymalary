@@ -36,6 +36,7 @@
 					<div class="row">
 						<!-- Sales Card -->
 						<div class="col-xxl-4 col-md-6">
+							<div class="card info-card sales-card">
 								<div class="card-body">
 									<h5 class="card-title">Feed <span>| Today</span></h5>
 									<div class="d-flex align-items-center">

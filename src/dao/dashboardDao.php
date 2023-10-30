@@ -38,7 +38,7 @@
 		function countFeed($cur_date, $resto)
 		{
 			$cur_date = '%'.$cur_date.'%';
-			$countfeed = $this->Auth->prepare("SELECT COUNT(*) AS total FROm `verify` WHERE `date_created` LIKE :cur_date AND `resto` = :resto ");
+			$countfeed = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `verify` WHERE `date_created` LIKE :cur_date AND `resto` = :resto ");
 			$countfeed->execute([':cur_date' => $cur_date, ':resto' => $resto]);
 
 			$totalfeed = $countfeed->fetch(PDO::FETCH_OBJ);
