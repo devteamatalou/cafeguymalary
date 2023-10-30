@@ -12,7 +12,11 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Restaurant Interface</title>
+
+		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
+		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
+		
+		<title>Checkin</title>
 		<link rel="stylesheet" href="../../public/assets/css/styles.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 		<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>

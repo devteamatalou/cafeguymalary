@@ -6,7 +6,7 @@
 
 	date_default_timezone_set("America/Port-Au-Prince");
 	$cur_date = date("l, d M Y");
-	$cur_time = date('i:m:s a');
+	$cur_time = date('h:i:s a');
 	$resto = 'GUY MALARY';
 
  $audiopath = '';
