@@ -18,7 +18,7 @@
 	include '../includes/sidebar.php';
 ?>
 
-	<main id="main" class="main">
+	<main style="height: 90vh; margin-bottom: 0;" id="main" class="main">
 		<div class="pagetitle">
 			<!-- <h1>Dashboard</h1> -->
 			<nav>

@@ -23,7 +23,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 	</head>
 
-	<body>
+	<body style="background-color: #DEAD66;">
 		<header>
 			<div class="resto-logo">
 				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
@@ -31,16 +31,16 @@
 			<div class="restaurant-logo">
 				<h1>Les Délices D'Edelande Restaurant</h1>
 			</div>
-			<div id="load-data"> </div>
+			<center><div id="load-data"> </div></center>
 		</header>
 
-		<footer id="footer">
+		<footer id="footer" style="background-color: #39302A;">
 			<div class="container">
 				<div class="copyright">
 					&copy; Copyright <strong><span>AAN</span></strong>
 				</div>
 				<div class="credits">
-					Designed by <strong><span>Atalou Micro System</span></strong></strong>
+					<span style="color: black; font-weight: 500;">DESIGN BY</span>&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #DCDCDC; font-weight: 700; font-size: 15px;">ATALOU MICRO SYSTEM</span></strong></strong>
 				</div>
 			</div>
 		</footer>
@@ -59,14 +59,14 @@
 		clean: true,
 		connectTimeout: 10000,
 		// Authentication
-		clientId: 'emqx_test',
-		username: 'emqx_test',
-		password: 'emqx_test',
+		clientId: 'emqx_guymalary',
+		username: 'emqx_guymalary',
+		password: 'emqx_guymalary',
 	}
 
 	const client = mqtt.connect(url, options);
 	client.on('connect', function() {
-		var topic = 'droid';
+		var topic = 'guymalary';
 		console.log('Connected');
 		// Subscribe to a topic
 		client.subscribe(topic, function(err) {});
