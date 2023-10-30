@@ -24,24 +24,16 @@
 			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="../admin/">Home</a></li>
-					<li class="breadcrumb-item active">Users</li>
+					<li class="breadcrumb-item active">Daily Report</li>
 				</ol>
 			</nav>
 		</div><!-- End Page Title -->
 		<section class="section">
-			<div class="row mb-3">
-				<div class="col-md-12">
-					<a href="#form" class="btn btn-primary pull-right" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Users</span></a>
-				</div>
-			</div>
-
 			<div class="row">
 				<div class="col-md-12">
-
 					<div class="">
 						<div class="">
-							<!-- <a href="#form" class="btn btn-success" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Category</span></a> -->
-							<table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+							<table id="example" class="table table-striped table-bordered dt-responsive nowrap custom-table" style="width:100%">
 								<thead>
 									<tr>
 										<th>#</th>

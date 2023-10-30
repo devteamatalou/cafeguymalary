@@ -36,11 +36,9 @@
 
 			<div class="row">
 				<div class="col-md-12">
-
 					<div class="">
 						<div class="">
-							<!-- <a href="#form" class="btn btn-success" data-toggle="modal"><i class="bi bi-plus"></i> <span>Add Category</span></a> -->
-							<table id="example" class="table table-striped table-bordered dt-responsive nowrap" style="width:100%">
+							<table id="example" class="table table-striped table-bordered dt-responsive nowrap custom-table" style="width:100%">
 								<thead>
 									<tr>
 										<th>Firstname</th>
