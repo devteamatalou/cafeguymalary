@@ -68,14 +68,11 @@
 
 						<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
 							<li class="dropdown-header">
-								<h6>Philogene Ohad</h6>
-								<span>Administrateur</span>
+								<h6><span><?= !empty($_SESSION['admin']) ? $_SESSION['admin']['firstname']: ''; ?></span><?= !empty($_SESSION['admin']) ? $_SESSION['admin']['lastname']: ''; ?></h6> <!-- there we use ternary operator to display the user info if the session is not empty -->
+								<span><?= $_SESSION['admin']['id_role'] == 1 ? 'Admin' : 'Simple User' ?></span> <!-- there we use ternary operator to display the user role depending on his role_id -->
 							</li>
 							<li>
 								<hr class="dropdown-divider">
-							</li>
-							<li>
-								<a class="dropdown-item d-flex align-items-center" href="users-profile.html"><i class="bi bi-gear"></i><span>Settings</span></a>
 							</li>
 							<li>
 								<hr class="dropdown-divider">
