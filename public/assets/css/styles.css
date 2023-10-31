@@ -60,10 +60,10 @@ h3 {
 	margin: auto;
 }
 
-.logout a:hover {
-	background-color: red;
+/* .logout a:hover {
+	background-color: #39302a40;
 	color: white;
-}
+} */
 
 main {
 	padding: 20px;
@@ -267,7 +267,7 @@ a:hover {
 
 /* -----------------------------  DINNER CHECKIN --------------------------------------- */
 body {
-	font-family:'Times New Roman', Times;
+	font-family: 'Times New Roman', Times;
 	margin: 0;
 	padding: 0;
 	background-color: #f5f5f5;
@@ -301,9 +301,9 @@ body {
 }
 
 h3 {
-    font-size: 35px; 
-    color: #0077b6;
-    font-weight: bold; 
+	font-size: 35px;
+	color: #0077b6;
+	font-weight: bold;
 }
 
 .logout {
@@ -329,7 +329,7 @@ h3 {
 }
 
 .logout a:hover {
-	background-color: red;
+	background-color: #39302a40;
 	color: white;
 }
 
@@ -387,7 +387,7 @@ main {
 	}
 
 	h3 {
-		font-size: 22px; 
+		font-size: 22px;
 		text-align: center;
 	}
 
@@ -405,8 +405,102 @@ main {
 	}
 
 	h3 {
-		font-size: 18px; 
+		font-size: 18px;
 		text-align: center;
 	}
 
+}
+
+/* --------------------------  DINNER CHECKIN CALENDAR -------------------------------- */
+/* Imports */
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+.contain {
+	position: absolute;
+	right: 15px;
+	top: 20px;
+	transform: none;
+	/* Réinitialise la transformation précédente */
+	font-family: "Poppins", sans-serif;
+}
+
+
+.calendar {
+	width: 170px;
+	height: 160px;
+	animation: swing 1s infinite alternate ease-in-out;
+	transform-origin: center -20px;
+	box-shadow: 0 14px 14px -10px rgba(0, 0, 0, 0.25);
+}
+
+.calendar:before {
+	position: absolute;
+	content: "";
+	top: -20px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 5px;
+	height: 5px;
+	background-color: black;
+	border-radius: 50%;
+}
+
+.calendar:after {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	margin-left: -20px;
+	content: "";
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	transform: rotate(45deg);
+	z-index: -1;
+}
+
+.calendar__month {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 75px;
+	/* background-color: crimson; */
+	/* background-color: #39302a; */
+	background-color: #ECCBAB;
+	color: #39302A;
+	font-size: 20px;
+}
+
+.calendar__day {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100px;
+	background-color: white;
+	font-size: 75px;
+}
+
+.calendar__time {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 10px;
+	background-color: white;
+	font-size: 20px;
+	padding-bottom: 10px;
+}
+
+
+@keyframes swing {
+	0% {
+		transform: rotate(3deg);
+	}
+
+	100% {
+		transform: rotate(-3deg);
+	}
 }

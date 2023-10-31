@@ -29,13 +29,24 @@
 
 	<body style="background-color: #DEAD66;">
 		<header>
+			<!-- ------------- <CALENDAR> ----------------- -->
+			<div class="contain">
+				<div class="calendar">
+					<div id="js-month" class="calendar__month"></div>
+					<div id="js-day" class="calendar__day"></div>
+					<div id="time" class="calendar__time"></div>
+				</div>
+			</div>
+			<!-- ------------- </CALENDAR> ----------------- -->
 			<div class="resto-logo">
 				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
 			</div>
 			<div class="restaurant-logo">
 				<h1>Les Délices D'Edelande Restaurant</h1>
 			</div>
-			<center><div id="load-data"> </div></center>
+			<center>
+				<div id="load-data"></div>
+			</center>
 		</header>
 
 		<footer id="footer" style="background-color: #39302A;">
@@ -50,7 +61,9 @@
 		</footer>
 	</body>
 	
-	<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
+	<script src="../../public/assets/js/calendar/calendar.js"></script>
+	<script src="../../public/assets/js/time/runningtime.js"></script>
 </html>
 
 
@@ -121,6 +134,9 @@
 
 	// the function to put default interface design
 	function homeDisplay() {
-		$("#load-data").html("<div class='logout'><img src='../../public/assets/img/deconnecter.png'><p><a id='bt-test' href='index.php'>Déconnexion</a></p></div>");
+		$("#load-data").html("<div class='logout'><a id='bt-test' href='index.php'><img src='../../public/assets/img/back.png'></a></div>");
 	}
+	// function homeDisplay() {
+	// 	$("#load-data").html("<div class='logout'><img src='../../public/assets/img/deconnecter.png'><p><a id='bt-test' href='index.php'>Déconnexion</a></p></div>");
+	// }
 </script>
