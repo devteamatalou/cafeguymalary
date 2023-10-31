@@ -61,6 +61,17 @@
 			</ul>
 		</li><!-- End Charts Nav -->
 
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#apk-nav" data-bs-toggle="collapse" href="#">
+				<i class="bi bi-download"></i><span>APK</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="apk-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="http://localhost/cafeguymalary/public/assets/apk/guymalarycafe2.apk" download><i class="bi bi-circle"></i><span>Download APK</span></a>
+				</li>
+			</ul>
+		</li><!-- End Download APK -->
+
 		<p style="margin-top: 50px; text-align: center;">
 			<img width="100" height="150" src="http://localhost/cafeguymalary/public/assets/img/female-chef.png" alt="">
 		</p>
