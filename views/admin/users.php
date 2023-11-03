@@ -58,7 +58,7 @@
 											<td><?= $allusers->username; ?></td>
 											<td><?= $allusers->task; ?></td>
 											<td>
-												<a href="#editCategoryModal" class="btn btn-success" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></a>
+												<button id="<?= $allusers->id; ?>" href="#editUser" class="btn btn-success edit-user" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></button>
 												<a href="#deleteCategoryModal" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
 											</td>
 										</tr>
@@ -119,7 +119,7 @@
 				</div>
 			</div>
 			<!-- Edit Products Modal HTML -->
-			<div id="editCategoryModal" class="modal fade">
+			<div id="editUser" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<form>
@@ -127,8 +127,8 @@
 								<h4 class="modal-title">Edit Product</h4>
 								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
 							</div>
-							<div class="modal-body">
-								<div class="form-group">
+							<div id="editmodal-body" class="modal-body">
+								<!-- <div class="form-group">
 									<label>Name</label>
 									<input type="text" class="form-control" required>
 								</div>
@@ -143,7 +143,7 @@
 								<div class="form-group">
 									<label>Phone</label>
 									<input type="text" class="form-control" required>
-								</div>
+								</div> -->
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -177,4 +177,24 @@
 		</section>
 	</main>
 
-	<?php include '../includes/footer.php'; ?>
+<?php include '../includes/footer.php'; ?>
+
+<script>
+	$(document).ready(function()
+	{
+  $('.edit-user').click(function()
+		{
+   // Get the ID attribute of the clicked button
+   let edit_bth = $(this).attr('id');
+
+   // Get the user data from input fields in the same row
+   let row = $(this).closest('tr');
+   let fname = row.find('td:eq(0)').text();
+   let lname = row.find('td:eq(1)').text();
+   let username = row.find('td:eq(2)').text();
+
+			// Populate the modal with user information, including the button ID
+			$('#editmodal-body').html("<div class='form-group'><label>Firstname</label><input type='text' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' class='form-control' value='"+lname+"' required></div><div class='form-group'><label>Username</label><input type='text' class='form-control' value='"+username+"' required></div>");
+		});
+	});
+</script>

@@ -15,7 +15,7 @@
 
 		function selectAllUsers()
 		{
-			$allusers_qry = $this->Auth->prepare("SELECT r.nom AS task, u.prenom, u.nom, u.username FROM `role` r JOIN `users` u ON r.id = u.id_role");
+			$allusers_qry = $this->Auth->prepare("SELECT r.nom AS task, u.id, u.prenom, u.nom, u.username FROM `role` r JOIN `users` u ON r.id = u.id_role");
 			$allusers_qry->execute();
 
 			return $allusers_qry;
