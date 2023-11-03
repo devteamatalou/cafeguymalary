@@ -71,7 +71,7 @@
 					</div>
 				</div>
 			</div>
-			<!-- Add Products Modal HTML -->
+			<!-- Add User Modal HTML -->
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -118,32 +118,18 @@
 					</div>
 				</div>
 			</div>
-			<!-- Edit Products Modal HTML -->
+
+
+			<!-- Edit User Modal HTML -->
 			<div id="editUser" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<form>
+						<form id="edituser" action="" method="post">
 							<div class="modal-header">
 								<h4 class="modal-title">Edit Product</h4>
 								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
 							</div>
 							<div id="editmodal-body" class="modal-body">
-								<!-- <div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Email</label>
-									<input type="email" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Address</label>
-									<textarea class="form-control" required></textarea>
-								</div>
-								<div class="form-group">
-									<label>Phone</label>
-									<input type="text" class="form-control" required>
-								</div> -->
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
@@ -185,7 +171,7 @@
   $('.edit-user').click(function()
 		{
    // Get the ID attribute of the clicked button
-   let edit_bth = $(this).attr('id');
+   let id = $(this).attr('id');
 
    // Get the user data from input fields in the same row
    let row = $(this).closest('tr');
@@ -194,7 +180,7 @@
    let username = row.find('td:eq(2)').text();
 
 			// Populate the modal with user information, including the button ID
-			$('#editmodal-body').html("<div class='form-group'><label>Firstname</label><input type='text' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' class='form-control' value='"+lname+"' required></div><div class='form-group'><label>Username</label><input type='text' class='form-control' value='"+username+"' required></div>");
+			$('#editmodal-body').html("<div class='form-group'><input type='hidden' name='eid' value='"+id+"'><label>Firstname</label><input type='text' name='efname' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' name='elname' class='form-control' value='"+lname+"' required></div><div class='form-group'><label>Username</label><input type='text' name='euname' class='form-control' value='"+username+"' required></div>");
 		});
 	});
 </script>

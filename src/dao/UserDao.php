@@ -40,6 +40,15 @@
 		}
 
 
+		function editUser($fname, $lname, $username, $id)
+		{
+			$edituser_qry = $this->Auth->prepare("UPDATE `users` SET `prenom`= :fname, `nom`= :lname, `username`= :username WHERE  `id` = :id");
+			$edituser_qry->execute([':fname' => $fname, ':lname' => $lname, ':username' => $username, ':id' => $id]);
+
+			if($edituser_qry->rowCount() > 0) return true;
+		}
+
+
 		/*function updatePassword($auth, $no_manager)
 		{
 			$updatepass_qry = $this->Auth->prepare("UPDATE `manager` SET `auth` = :auth WHERE `no_manager` = :no_manager");

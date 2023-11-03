@@ -1,11 +1,11 @@
 $(document).ready(() => {
-	$('#adduser').submit((e) => {
+	$('#edituser').submit((e) => {
 		e.preventDefault();
 
-		var dataForm = $('#adduser')[0];
+		var dataForm = $('#edituser')[0];
 		var formData = new FormData(dataForm);
 		$.ajax({
-			url: 'http://localhost/cafeguymalary/src/controllers/adm/adduser.ctrl.php',
+			url: 'http://localhost/cafeguymalary/src/controllers/adm/edituser.ctrl.php',
 			type: "POST",
 			dataType: 'script',
 			cache: false,
@@ -17,7 +17,7 @@ $(document).ready(() => {
 				console.log(data)
 				let reponse = JSON.parse(data)
 				if (reponse.status === true) {
-					$('#adduser')[0].reset();
+					$('#edituser')[0].reset();
 					Toastify({
 						text: reponse.message,
 						duration: 1000,
