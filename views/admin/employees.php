@@ -39,7 +39,7 @@
 									<tr>
 										<th>Firstname</th>
 										<th>Lastname</th>
-										<th>Sex</th>
+										<th>Gender</th>
 										<th>Barcode</th>
 										<th>Dated Created</th>
 										<th>Action</th>
@@ -56,7 +56,7 @@
 											<td><?= $allemps->barcode; ?></td>
 											<td><?= $allemps->created_at; ?></td>
 											<td>
-												<a href="#editCategoryModal" class="btn btn-success" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></a>
+												<button id="<?= $allemps->id; ?>" href="#editEmp" class="btn btn-success edit-emp" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></button>
 												<a href="#deleteCategoryModal" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
 											</td>
 										</tr>
@@ -69,7 +69,8 @@
 					</div>
 				</div>
 			</div>
-			<!-- Add Products Modal HTML -->
+
+			<!-- Add Employee Modal HTML -->
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
@@ -107,41 +108,28 @@
 					</div>
 				</div>
 			</div>
-			<!-- Edit Products Modal HTML -->
-			<div id="editCategoryModal" class="modal fade">
+
+
+			<!-- Edit Employee Modal HTML -->
+			<div id="editEmp" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
-						<form>
+						<form id="editemp" action="" method="post">
 							<div class="modal-header">
-								<h4 class="modal-title">Edit Product</h4>
-								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+								<h4 class="modal-title">Edit Employee</h4>
 							</div>
-							<div class="modal-body">
-								<div class="form-group">
-									<label>Name</label>
-									<input type="text" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Email</label>
-									<input type="email" class="form-control" required>
-								</div>
-								<div class="form-group">
-									<label>Address</label>
-									<textarea class="form-control" required></textarea>
-								</div>
-								<div class="form-group">
-									<label>Phone</label>
-									<input type="text" class="form-control" required>
-								</div>
+							<div id="editmodal-body" class="modal-body">
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<input type="submit" class="btn btn-info" value="Save">
+								<input type="submit" class="btn btn-info" value="Update">
 							</div>
 						</form>
 					</div>
 				</div>
 			</div>
+
+
 			<!-- Delete Products Modal HTML -->
 			<div id="deleteCategoryModal" class="modal fade">
 				<div class="modal-dialog">
@@ -167,3 +155,27 @@
 	</main>
 
 <?php include '../includes/footer.php'; ?>
+
+<script>
+	$(document).ready(function()
+	{
+  // $('.edit-emp').click(function()
+  $(document).on('click', '.edit-emp', function()
+		{
+   // Get the ID attribute of the clicked button
+   let id = $(this).attr('id');
+
+   // Get the user data from input fields in the same row
+   let row = $(this).closest('tr');
+   let fname = row.find('td:eq(0)').text();
+   let lname = row.find('td:eq(1)').text();
+   let gender = row.find('td:eq(2)').text();
+
+			// Set the selected option in the gender select based on the user's gender
+			$('#gender').val(gender);
+			
+			// Populate the modal with user information, including the button ID
+			$('#editmodal-body').html("<div class='form-group'><input type='hidden' name='eid' value='"+id+"'><label>Firstname</label><input type='text' name='efname' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' name='elname' class='form-control' value='"+lname+"' required></div><div class='form-group'><label for='gender'>Gender</label><select class='form-select form-select-lg mb-3' aria-label='.form-select-lg example' id='gender' name='egender'><option value='M'>Male</option><option value='F'>Female</option></select></div>");
+		});
+	});
+</script>

@@ -15,7 +15,7 @@
 
 		function selectAllEmps()
 		{
-			$allemps_qry = $this->Auth->prepare("SELECT `nom`, `prenom`, `sexe`, `barcode`, `created_at` FROM `employee`");
+			$allemps_qry = $this->Auth->prepare("SELECT * FROM `employee`");
 			$allemps_qry->execute();
 
 			return $allemps_qry;
@@ -28,6 +28,14 @@
 
 			if($addemp_qry->rowCount() > 0)
 			 return true;
+		}
+
+		function editEmp($fname, $lname, $gender, $id)
+		{
+			$editemp_qry = $this->Auth->prepare("UPDATE `employee` SET `prenom`= :fname, `nom`= :lname, `sexe`= :username WHERE `id` = :id");
+			$editemp_qry->execute([':fname' => $fname, ':lname' => $lname, ':username' => $gender, ':id' => $id]);
+
+			if($editemp_qry->rowCount() > 0) return true;
 		}
 	}
 ?>

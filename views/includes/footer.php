@@ -10,6 +10,7 @@
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/adduser.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/edituser.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/emp/addemp.js"></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/emp/editemp.js"></script>
 
 		<!-- Js link for running time -->
 		<script src="http://localhost/cafeguymalary/public/assets/js/time/runningtime.js"></script>

@@ -126,7 +126,7 @@
 					<div class="modal-content">
 						<form id="edituser" action="" method="post">
 							<div class="modal-header">
-								<h4 class="modal-title">Edit Product</h4>
+								<h4 class="modal-title">Edit User</h4>
 								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
 							</div>
 							<div id="editmodal-body" class="modal-body">
@@ -139,6 +139,7 @@
 					</div>
 				</div>
 			</div>
+			
 			<!-- Delete Products Modal HTML -->
 			<div id="deleteCategoryModal" class="modal fade">
 				<div class="modal-dialog">
