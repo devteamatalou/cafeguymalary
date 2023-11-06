@@ -171,11 +171,13 @@
    let lname = row.find('td:eq(1)').text();
    let gender = row.find('td:eq(2)').text();
 
-			// Set the selected option in the gender select based on the user's gender
-			$('#gender').val(gender);
+			console.log(gender);
 			
 			// Populate the modal with user information, including the button ID
 			$('#editmodal-body').html("<div class='form-group'><input type='hidden' name='eid' value='"+id+"'><label>Firstname</label><input type='text' name='efname' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' name='elname' class='form-control' value='"+lname+"' required></div><div class='form-group'><label for='gender'>Gender</label><select class='form-select form-select-lg mb-3' aria-label='.form-select-lg example' id='gender' name='egender'><option value='M'>Male</option><option value='F'>Female</option></select></div>");
+
+			// Set the selected option in the gender select based on the user's gender
+			$('#gender').val(gender);
 		});
 	});
 </script>

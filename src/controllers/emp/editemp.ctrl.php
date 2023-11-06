@@ -12,9 +12,9 @@
 		$id = htmlspecialchars($eid);
 		$fname = htmlspecialchars($efname);
 		$lname = htmlspecialchars($elname);
-		$gender = str_replace(' ', '', htmlspecialchars($gender));
+		$gender = str_replace(' ', '', htmlspecialchars($egender));
 
-		if($userDao->editUser($fname, $lname, $username, $id))
+		if($empDao->editEmp($fname, $lname, $gender, $id))
 			$response = ['status' => true, 'message' => 'Employee edited successfully'];
 		else
 			$response = ['status' => false, 'message' => 'Error while editing Employee'];
