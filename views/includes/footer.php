@@ -9,6 +9,7 @@
 		<!-- Form Js links -->
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/adduser.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/edituser.js"></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/adm/deleteuser.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/emp/addemp.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/emp/editemp.js"></script>
 
@@ -49,5 +50,8 @@
 		<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.html5.min.js"></script>
 		<script src="https://cdn.datatables.net/buttons/2.3.6/js/buttons.print.min.js"></script>
 		<script src="https://cdn.datatables.net/datetime/1.4.0/js/dataTables.dateTime.min.js"></script>
+
+		<!-- ------------ Sweet Alert link -->
+		<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	</body>
 </html>

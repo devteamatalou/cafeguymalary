@@ -59,7 +59,7 @@
 											<td><?= $allusers->task; ?></td>
 											<td>
 												<button id="<?= $allusers->id; ?>" href="#editUser" class="btn btn-success edit-user" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></button>
-												<a href="#deleteCategoryModal" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
+												<a href="<?= $allusers->id; ?>" class="btn btn-danger delete-user"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
 											</td>
 										</tr>
 									<?php
@@ -141,13 +141,13 @@
 			</div>
 			
 			<!-- Delete Products Modal HTML -->
-			<div id="deleteCategoryModal" class="modal fade">
+			<!-- <div id="deleteCategoryModal" class="modal fade">
 				<div class="modal-dialog">
 					<div class="modal-content">
 						<form>
 							<div class="modal-header">
 								<h4 class="modal-title">Delete Product</h4>
-								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
+								<-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> --
 							</div>
 							<div class="modal-body">
 								<p>Are you sure you want to delete these products?</p>
@@ -160,7 +160,7 @@
 						</form>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</section>
 	</main>
 

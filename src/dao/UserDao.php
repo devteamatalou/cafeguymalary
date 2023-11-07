@@ -48,6 +48,14 @@
 			if($edituser_qry->rowCount() > 0) return true;
 		}
 
+		function deleteUser($id)
+		{
+			$deluser_qry = $this->Auth->prepare("DELETE FROM `users` WHERE `id` = :id");
+			$deluser_qry->execute([':id' => $id]);
+
+			if($deluser_qry->rowCount() > 0 ) return true;
+		}
+
 
 		/*function updatePassword($auth, $no_manager)
 		{
