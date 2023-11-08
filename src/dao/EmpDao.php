@@ -21,6 +21,14 @@
 			return $allemps_qry;
 		}
 
+		function selectAllDelEmps()
+		{
+			$allemps_qry = $this->Auth->prepare("SELECT * FROM `employee` WHERE `_delete` = :isdelete");
+			$allemps_qry->execute([':isdelete' => 1]);
+
+			return $allemps_qry;
+		}
+
 		function addEmp($fname, $lname, $gender, $barcode, $created_at)
 		{
 			$addemp_qry = $this->Auth->prepare("INSERT INTO `employee` (`prenom`, `nom`, `sexe`, `barcode`, `created_at`) VALUES (:prenom, :nom, :sexe, :barcode, :created_at)");

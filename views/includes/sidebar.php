@@ -30,7 +30,10 @@
 			</a>
 			<ul id="employe-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-				<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
+					<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
+				</li>
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/delemployees.php"><i class="bi bi-circle"></i><span>Deleted Employees</span></a>
 				</li>
 			</ul>
 		</li><!-- End section employe  -->
