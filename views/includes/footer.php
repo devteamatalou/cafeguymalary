@@ -30,7 +30,6 @@
 
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
-		<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 		<!-- dd -->
 		<script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
 		<script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
