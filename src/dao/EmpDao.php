@@ -53,5 +53,13 @@
 
 			if($delemp_qry->rowCount() > 0 ) return true;
 		}
+
+		function restoreEmp($id)
+		{
+			$delemp_qry = $this->Auth->prepare("UPDATE `employee` SET `_delete` = :del WHERE `id` = :id");
+			$delemp_qry->execute([':id' => $id, ':del' => 0]);
+
+			if($delemp_qry->rowCount() > 0 ) return true;
+		}
 	}
 ?>

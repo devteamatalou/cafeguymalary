@@ -1,24 +1,24 @@
 $(document).ready(() => {
-	$('#example tbody').on('click', '.delete-emp', function (e) {
+	$('#example tbody').on('click', '.restore-emp', function (e) {
 		e.preventDefault();
 		let id = $(this).attr('href');
 
 		swal({
 			title: "Confirmation",
-			text: "Do you really want to delete this employee ?",
+			text: "Do you really want to restore this employee ?",
 			icon: "warning",
 			buttons: true,
 			dangerMode: true,
 		}).then((willDelete) => {
 			if (willDelete) {
 				$.ajax({
-					url: 'http://localhost/cafeguymalary/src/controllers/emp/deletemp.ctrl.php',
+					url: 'http://localhost/cafeguymalary/src/controllers/emp/restoremp.ctrl.php',
 					type: "POST",
 					dataType: 'json',
 					data: { id: id },
 					success: function (data) {
 						console.log(data);
-						swal("Delete Employee", "Employee deleted successfully", "success");
+						swal("Restore Employee", "Employee restored successfully", "success");
 						setTimeout(function () {
 							window.location.reload();
 						}, 3000);
