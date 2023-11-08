@@ -4,7 +4,7 @@ $(document).ready(() => {
 		var dataForm = $('#login')[0];
 		var formData = new FormData(dataForm);
 		$.ajax({
-			url: 'http://localhost/cafeguymalary/src/controllers/auth/login.ctrl.php',
+			url: 'http://cafeguymalary.atalou.org/src/controllers/auth/login.ctrl.php',
 			type: "POST",
 			dataType: 'script',
 			cache: false,
@@ -29,7 +29,7 @@ $(document).ready(() => {
 						},
 						callback: function()
 						{
-							window.location = "http://localhost/cafeguymalary/views/admin/";
+							window.location = "http://cafeguymalary.atalou.org/views/admin/";
 						}
 					}).showToast();
 

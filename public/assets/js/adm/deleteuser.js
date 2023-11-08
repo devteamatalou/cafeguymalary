@@ -12,7 +12,7 @@ $(document).ready(() => {
 		}).then((willDelete) => {
 			if (willDelete) {
 				$.ajax({
-					url: 'http://localhost/cafeguymalary/src/controllers/adm/deleteuser.ctrl.php',
+					url: 'http://cafeguymalary.atalou.org/src/controllers/adm/deleteuser.ctrl.php',
 					type: "POST",
 					dataType: 'json',
 					data: { id: id },
