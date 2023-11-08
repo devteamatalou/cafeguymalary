@@ -55,17 +55,5 @@
 
 			if($deluser_qry->rowCount() > 0 ) return true;
 		}
-
-
-		/*function updatePassword($auth, $no_manager)
-		{
-			$updatepass_qry = $this->Auth->prepare("UPDATE `manager` SET `auth` = :auth WHERE `no_manager` = :no_manager");
-			$updatepass_qry->execute([':auth' => $auth, ':no_manager' => $no_manager]);
-
-			if($updatepass_qry->rowCount() > 0)
-			return true;
-			else
-			 return false;
-		}*/
 	}
 ?>

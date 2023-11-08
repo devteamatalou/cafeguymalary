@@ -13,8 +13,8 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
+		<link href="http://cafeguymalary.atalou.org/public/assets/img/logo_resto.png" rel="icon">
+		<link href="http://cafeguymalary.atalou.org/public/assets/img/logo_resto.png" rel="apple-touch-icon">
 		
 		<title>Checkin</title>
 		<link rel="stylesheet" href="../../public/assets/css/styles.css">
@@ -136,7 +136,4 @@
 	function homeDisplay() {
 		$("#load-data").html("<div class='logout'><a id='bt-test' href='index.php'><img src='../../public/assets/img/back.png'></a></div>");
 	}
-	// function homeDisplay() {
-	// 	$("#load-data").html("<div class='logout'><img src='../../public/assets/img/deconnecter.png'><p><a id='bt-test' href='index.php'>Déconnexion</a></p></div>");
-	// }
 </script>

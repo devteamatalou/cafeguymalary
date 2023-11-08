@@ -121,19 +121,6 @@
 			</div>
 		</section>
 
-		<!-- Statistical Sales -->
-		<!-- <section class="section">
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Statistical Sales</h5>
-							<div id="columnChart">
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>-->
 
 			<!-- Add Calculator Modal HTML -->
 			<div id="calculateModal" class="modal fade">
