@@ -4,11 +4,11 @@
 	if(empty($_SESSION['admin']))
 		header('Location: login.php');
 
-		include '../../vendor/autoload.php';
+	include '../../vendor/autoload.php';
 
-		use src\dao\EmpDao;
-		$empdao = new EmpDao();
-		$select_all_emps = $empdao->selectAllEmps();
+	use src\dao\EmpDao;
+	$empdao = new EmpDao();
+	$select_all_emps = $empdao->selectAllEmps();
 
 	include '../includes/header.php';
 	include '../includes/sidebar.php';
@@ -57,7 +57,7 @@
 											<td><?= $allemps->created_at; ?></td>
 											<td>
 												<button id="<?= $allemps->id; ?>" href="#editEmp" class="btn btn-success edit-emp" data-toggle="modal"><i class="bi bi-pencil-square" data-toggle="tooltip" title="Edit"></i></button>
-												<a href="#deleteCategoryModal" class="btn btn-danger" data-toggle="modal"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
+												<a href="<?= $allemps->id; ?>" class="btn btn-danger delete-emp"><i class="bi bi-trash" data-toggle="tooltip" title="Delete"></i></a>
 											</td>
 										</tr>
 									<?php
@@ -94,7 +94,7 @@
 								</div>
 								<div class="form-group">
 									<label>Gender</label>
-									<select name="gender" class="form-select" required>
+									<select name="gender" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
 										<option value="M">M</option>
 										<option value="F">F</option>
 									</select>
@@ -123,29 +123,6 @@
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 								<input type="submit" class="btn btn-info" value="Update">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div>
-
-
-			<!-- Delete Products Modal HTML -->
-			<div id="deleteCategoryModal" class="modal fade">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<form>
-							<div class="modal-header">
-								<h4 class="modal-title">Delete Product</h4>
-								<!-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> -->
-							</div>
-							<div class="modal-body">
-								<p>Are you sure you want to delete these products?</p>
-								<p class="text-warning"><small>This action cannot be undone.</small></p>
-							</div>
-							<div class="modal-footer">
-								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<input type="submit" class="btn btn-danger" value="Delete">
 							</div>
 						</form>
 					</div>

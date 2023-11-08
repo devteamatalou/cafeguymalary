@@ -95,7 +95,7 @@
 								</div>
 								<div class="form-group">
 									<label>Role</label>
-									<select name="role" class="form-select" required>
+									<select name="role" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" required>
 										<?php
 										 while($allroles = $allroles_stmt->fetch(PDO::FETCH_OBJ)):
 										?>
@@ -139,28 +139,6 @@
 					</div>
 				</div>
 			</div>
-			
-			<!-- Delete Products Modal HTML -->
-			<!-- <div id="deleteCategoryModal" class="modal fade">
-				<div class="modal-dialog">
-					<div class="modal-content">
-						<form>
-							<div class="modal-header">
-								<h4 class="modal-title">Delete Product</h4>
-								<-- <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button> --
-							</div>
-							<div class="modal-body">
-								<p>Are you sure you want to delete these products?</p>
-								<p class="text-warning"><small>This action cannot be undone.</small></p>
-							</div>
-							<div class="modal-footer">
-								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<input type="submit" class="btn btn-danger" value="Delete">
-							</div>
-						</form>
-					</div>
-				</div>
-			</div> -->
 		</section>
 	</main>
 

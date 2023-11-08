@@ -15,8 +15,8 @@
 
 		function selectAllEmps()
 		{
-			$allemps_qry = $this->Auth->prepare("SELECT * FROM `employee`");
-			$allemps_qry->execute();
+			$allemps_qry = $this->Auth->prepare("SELECT * FROM `employee` WHERE `_delete` = :isdelete");
+			$allemps_qry->execute([':isdelete' => 0]);
 
 			return $allemps_qry;
 		}
@@ -36,6 +36,14 @@
 			$editemp_qry->execute([':fname' => $fname, ':lname' => $lname, ':username' => $gender, ':id' => $id]);
 
 			if($editemp_qry->rowCount() > 0) return true;
+		}
+		
+		function deleteEmp($id)
+		{
+			$delemp_qry = $this->Auth->prepare("UPDATE `employee` SET `_delete` = :del WHERE `id` = :id");
+			$delemp_qry->execute([':id' => $id, ':del' => 1]);
+
+			if($delemp_qry->rowCount() > 0 ) return true;
 		}
 	}
 ?>

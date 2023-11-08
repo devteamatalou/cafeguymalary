@@ -12,6 +12,7 @@
 		<script src="http://localhost/cafeguymalary/public/assets/js/adm/deleteuser.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/emp/addemp.js"></script>
 		<script src="http://localhost/cafeguymalary/public/assets/js/emp/editemp.js"></script>
+		<script src="http://localhost/cafeguymalary/public/assets/js/emp/deletemp.js"></script>
 
 		<!-- Js link for running time -->
 		<script src="http://localhost/cafeguymalary/public/assets/js/time/runningtime.js"></script>
