@@ -27,12 +27,22 @@
 
 		function countEmps()
 		{
-			$emps_qry = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `employee`");
-			$emps_qry->execute();
+			$emps_qry = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `employee` WHERE `_delete` = :isdelete");
+			$emps_qry->execute([':isdelete' => 0]);
 
 			$totalemps = $emps_qry->fetch(PDO::FETCH_OBJ);
 
 			return $totalemps;
+		}
+
+		function countDelEmps()
+		{
+			$delemps_qry = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `employee` WHERE `_delete` = :isdelete");
+			$delemps_qry->execute([':isdelete' => 1]);
+
+			$total_delemps = $delemps_qry->fetch(PDO::FETCH_OBJ);
+
+			return $total_delemps;
 		}
 
 		function countFeed($cur_date, $resto)
