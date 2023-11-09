@@ -1,5 +1,5 @@
 {
-    "name": "devteam/ataschool",
+    "name": "devteam/cafeguymalary",
     "autoload": {
         "psr-4": {
             "src\\": "src/"

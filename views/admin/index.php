@@ -1,17 +1,20 @@
 <?php
 	session_start();
 
+	error_reporting(E_ALL);
+	ini_set('display_errors', 1);
+
 	include '../../vendor/autoload.php';
 
 	if (empty($_SESSION['admin']))
 		header('Location: login.php');
 
-		use src\dao\DashboardDao;
-		$dashDao = new DashboardDao();
+	use src\dao\DashboardDao;
+	$dashDao = new DashboardDao();
 
-		$resto = 'GUY MALARY';
-		date_default_timezone_set('America/Port-Au-Prince');
-		$cur_date = date('l, d M Y');
+	$resto = 'GUY MALARY';
+	date_default_timezone_set('America/Port-Au-Prince');
+	$cur_date = date('l, d M Y');
 
 
 	include '../includes/header.php';
