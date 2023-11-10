@@ -4,13 +4,13 @@
 	if(empty($_SESSION['admin']))
 		header('Location: login.php');
 
-		include '../../vendor/autoload.php';
+	include '../../vendor/autoload.php';
 
-		use src\dao\UserDao;
-		$userdao = new UserDao();
-		$select_all_users = $userdao->selectAllUsers();
+	use src\dao\UserDao;
+	$userdao = new UserDao();
+	$select_all_users = $userdao->selectAllUsers($_SESSION['admin']['id']);
 
-		$allroles_stmt = $userdao->selectAllRoles();
+	$allroles_stmt = $userdao->selectAllRoles();
 
 
 	include '../includes/header.php';

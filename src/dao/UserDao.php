@@ -1,7 +1,6 @@
 <?php
- session_start();
 
-	namespace src\dao;
+ namespace src\dao;
 	use src\config\Instance;
 
 
@@ -15,12 +14,20 @@
 				$this->Auth = Instance::getDB();
 		}
 
-		function selectAllUsers()
+		function selectAllUsers($connected_id)
 		{
 			$allusers_qry = $this->Auth->prepare("SELECT r.nom AS task, u.id, u.prenom, u.nom, u.username, u._delete FROM `role` r JOIN `users` u ON r.id = u.id_role WHERE u._delete = :isdelete AND u.id != :userid");
-			$allusers_qry->execute([':isdelete' => 0, ':userid' => $_SESSION['admin']['id']]);
+			$allusers_qry->execute([':isdelete' => 0, ':userid' => $connected_id]);
 
 			return $allusers_qry;
+		}
+
+		function selectAllDelUsers()
+		{
+			$alldelusers_qry = $this->Auth->prepare("SELECT * FROM `users` WHERE `_delete` = :isdelete");
+			$alldelusers_qry->execute([':isdelete' => 1]);
+
+			return $alldelusers_qry;
 		}
 
 		function addUser($id_role, $firstname, $lastname, $username, $auth)
@@ -52,8 +59,8 @@
 
 		function deleteUser($id)
 		{
-			$deluser_qry = $this->Auth->prepare("DELETE FROM `users` WHERE `id` = :id");
-			$deluser_qry->execute([':id' => $id]);
+			$deluser_qry = $this->Auth->prepare("UPDATE `users` SET `_delete` = :del WHERE `id` = :id");
+			$deluser_qry->execute([':del' => 1, ':id' => $id]);
 
 			if($deluser_qry->rowCount() > 0 ) return true;
 		}
