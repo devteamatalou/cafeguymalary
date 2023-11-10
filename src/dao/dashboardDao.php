@@ -17,8 +17,8 @@
 
 		function countUsers()
 		{
-			$countusers_qry = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `users`");
-			$countusers_qry->execute();
+			$countusers_qry = $this->Auth->prepare("SELECT COUNT(*) AS total FROM `users` WHERE `_delete` = :isdelete");
+			$countusers_qry->execute([':isdelete' => 0]);
 
 			$totalusers = $countusers_qry->fetch(PDO::FETCH_OBJ);
 

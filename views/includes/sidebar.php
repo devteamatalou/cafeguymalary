@@ -15,10 +15,10 @@
 			</a>
 			<ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<!-- <a href="users.html"><i class="bi bi-circle"></i><span>Add User</span></a> -->
+					<a href="http://cafeguymalary.atalou.org/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
 				</li>
 				<li>
-					<a href="http://cafeguymalary.atalou.org/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
+					<a href="http://cafeguymalary.atalou.org/views/admin/delusers.php"><i class="bi bi-circle"></i><span>Deleted Users</span></a>
 				</li>
 			</ul>
 		</li><!-- End user Nav -->

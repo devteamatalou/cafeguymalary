@@ -10,6 +10,7 @@
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/adm/adduser.js"></script>
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/adm/edituser.js"></script>
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/adm/deleteuser.js"></script>
+		<script src="http://cafeguymalary.atalou.org/public/assets/js/adm/restoreuser.js"></script>
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/emp/addemp.js"></script>
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/emp/editemp.js"></script>
 		<script src="http://cafeguymalary.atalou.org/public/assets/js/emp/deletemp.js"></script>
