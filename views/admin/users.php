@@ -8,7 +8,7 @@
 
 		use src\dao\UserDao;
 		$userdao = new UserDao();
-		$select_all_users = $userdao->selectAllUsers();
+		$select_all_users = $userdao->selectAllUsers($_SESSION['admin']['id']);
 
 		$allroles_stmt = $userdao->selectAllRoles();
 
