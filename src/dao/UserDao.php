@@ -23,7 +23,7 @@
 
 		function selectAllDelUsers()
 		{
-			$alldelusers_qry = $this->Auth->prepare("SELECT * FROM `users` WHERE `_delete` = :isdelete");
+			$alldelusers_qry = $this->Auth->prepare("SELECT r.nom AS task, u.id, u.prenom, u.nom, u.username, u._delete FROM `role` r JOIN `users` u ON r.id = u.id_role WHERE u._delete = :isdelete");
 			$alldelusers_qry->execute([':isdelete' => 1]);
 
 			return $alldelusers_qry;
