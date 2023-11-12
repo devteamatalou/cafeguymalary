@@ -29,10 +29,10 @@
 			return $allemps_qry;
 		}
 
-		function addEmp($fname, $lname, $gender, $barcode, $created_at)
+		function addEmp($fname, $lname, $gender, $barcode)
 		{
-			$addemp_qry = $this->Auth->prepare("INSERT INTO `employee` (`prenom`, `nom`, `sexe`, `barcode`, `created_at`) VALUES (:prenom, :nom, :sexe, :barcode, :created_at)");
-			$addemp_qry->execute([':prenom' => $fname, ':nom' => $lname, ':sexe' => $gender, ':barcode' => $barcode, ':created_at' => $created_at]);
+			$addemp_qry = $this->Auth->prepare("INSERT INTO `employee` (`prenom`, `nom`, `sexe`, `barcode`) VALUES (:prenom, :nom, :sexe, :barcode)");
+			$addemp_qry->execute([':prenom' => $fname, ':nom' => $lname, ':sexe' => $gender, ':barcode' => $barcode]);
 
 			if($addemp_qry->rowCount() > 0)
 			 return true;

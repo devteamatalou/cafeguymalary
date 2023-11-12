@@ -6,9 +6,6 @@
  $empDao = new EmpDao();
  $response = [];
 
-	date_default_timezone_set('America/Port-Au-Prince');
-	$cur_date = date('d M Y - h:i:s a');
-
 	if ($_POST)
 	{
 		extract($_POST);
@@ -17,7 +14,7 @@
 		$gender = str_replace(' ', '', htmlspecialchars($gender));
 		$barcode = str_replace(' ', '', htmlspecialchars($barcode));
 
-		if($addemp = $empDao->addEmp($fname, $lname, $gender, $barcode, $cur_date))
+		if($addemp = $empDao->addEmp($fname, $lname, $gender, $barcode))
 			$response = ['status' => true, 'message' => 'Employee added successfully'];
 		else
 			$response = ['status' => false, 'message' => 'Failed to add new employee'];
