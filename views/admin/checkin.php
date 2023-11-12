@@ -38,6 +38,7 @@
 				</div>
 			</div>
 			<!-- ------------- </CALENDAR> ----------------- -->
+			
 			<div class="resto-logo">
 				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
 			</div>
