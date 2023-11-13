@@ -1,4 +1,6 @@
 <?php
+ ob_start();
+	
  require "../../../vendor/autoload.php";
 
  use src\dao\CheckinDao;
