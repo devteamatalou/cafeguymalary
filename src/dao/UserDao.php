@@ -72,5 +72,13 @@
 
 			if($restoruser_qry->rowCount() > 0 ) return true;
 		}
+
+		function checkUsernameExists($uname)
+		{
+			$unamexists_qry = $this->Auth->prepare("SELECT `id` FROM `users` WHERE `username` = :username");
+			$unamexists_qry->execute([':username' => $uname]);
+
+			if($unamexists_qry->rowCount() > 0) return true;
+		}
 	}
 ?>

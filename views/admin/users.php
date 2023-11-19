@@ -71,6 +71,7 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- Add User Modal HTML -->
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
@@ -91,7 +92,12 @@
 								</div>
 								<div class="form-group">
 									<label>Username</label>
-									<input name="uname" type="text" class="form-control" required/>
+									<input id="username" name="uname" type="text" class="form-control" required/>
+
+									<!-- div to display if username already exists -->
+									<div class="input-group mb-1 d-flex justify-content-between">
+										<div id="unameExists" class="text-danger"></div>
+									</div>
 								</div>
 								<div class="form-group">
 									<label>Role</label>
@@ -112,7 +118,7 @@
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<button type="submit" class="btn btn-success">Add</button>
+								<button id="sub-btn" type="submit" class="btn btn-success">Add</button>
 							</div>
 						</form>
 					</div>
@@ -145,6 +151,7 @@
 <?php include '../includes/footer.php'; ?>
 
 <script>
+	// set the selected user info inside the modal to edit user
 	$(document).ready(function()
 	{
   $('.edit-user').click(function()
