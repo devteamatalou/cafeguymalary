@@ -145,6 +145,7 @@
 <?php include '../includes/footer.php'; ?>
 
 <script>
+	// set the selected user info inside the modal to edit user
 	$(document).ready(function()
 	{
   $('.edit-user').click(function()
@@ -160,6 +161,36 @@
 
 			// Populate the modal with user information, including the button ID
 			$('#editmodal-body').html("<div class='form-group'><input type='hidden' name='eid' value='"+id+"'><label>Firstname</label><input type='text' name='efname' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' name='elname' class='form-control' value='"+lname+"' required></div><div class='form-group'><label>Username</label><input type='text' name='euname' class='form-control' value='"+username+"' required></div>");
+		});
+	});
+
+
+ // check if the username entered for the new user already exists, if yes the 'add button' will be disabled
+	$(document).ready(function()
+	{
+		$("#username").on('keyup blur', function()
+		{
+			let uname = $("#username").val();
+			
+			$.ajax(
+			{
+				url: 'http://cafeguymalary.atalou.org/src/controllers/usernamexists.ctrl.php',
+				type: 'POST',
+				data: {uname:uname},
+				success: function(response)
+				{
+					if(response == 1)
+					{
+						$('#unameExists').show().text('Ce nom d\'utilisateur est déjà utilisé');
+						$('#sub-btn').prop('disabled', true);
+					}
+					else
+					{
+						$('#unameExists').hide();
+						$('#sub-btn').prop('disabled', false);
+					}
+				}
+			});
 		});
 	});
 </script>
