@@ -186,7 +186,7 @@
 				{
 					if(response == 1)
 					{
-						$('#unameExists').show().text('Ce nom d\'utilisateur est déjà utilisé');
+						$('#unameExists').show().text('username already exists');
 						$('#sub-btn').prop('disabled', true);
 					}
 					else
