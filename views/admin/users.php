@@ -71,6 +71,7 @@
 					</div>
 				</div>
 			</div>
+
 			<!-- Add User Modal HTML -->
 			<div id="form" class="modal fade">
 				<div class="modal-dialog">
@@ -91,7 +92,12 @@
 								</div>
 								<div class="form-group">
 									<label>Username</label>
-									<input name="uname" type="text" class="form-control" required/>
+									<input id="username" name="uname" type="text" class="form-control" required/>
+
+									<!-- div to display if username already exists -->
+									<div class="input-group mb-1 d-flex justify-content-between">
+										<div id="unameExists" class="text-danger"></div>
+									</div>
 								</div>
 								<div class="form-group">
 									<label>Role</label>
@@ -112,7 +118,7 @@
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<button type="submit" class="btn btn-success">Add</button>
+								<button id="sub-btn" type="submit" class="btn btn-success">Add</button>
 							</div>
 						</form>
 					</div>
@@ -181,7 +187,7 @@
 				{
 					if(response == 1)
 					{
-						$('#unameExists').show().text('Ce nom d\'utilisateur est déjà utilisé');
+						$('#unameExists').show().text('Username already exists');
 						$('#sub-btn').prop('disabled', true);
 					}
 					else
