@@ -174,7 +174,7 @@
 			
 			$.ajax(
 			{
-				url: 'http://cafeguymalary.atalou.org/src/controllers/usernamexists.ctrl.php',
+				url: 'http://cafeguymalary.atalou.org/src/controllers/adm/usernamexists.ctrl.php',
 				type: 'POST',
 				data: {uname:uname},
 				success: function(response)
