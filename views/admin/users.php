@@ -162,4 +162,33 @@
 			$('#editmodal-body').html("<div class='form-group'><input type='hidden' name='eid' value='"+id+"'><label>Firstname</label><input type='text' name='efname' class='form-control' value='"+fname+"' required></div><div class='form-group'><label>Lastname</label><input type='text' name='elname' class='form-control' value='"+lname+"' required></div><div class='form-group'><label>Username</label><input type='text' name='euname' class='form-control' value='"+username+"' required></div>");
 		});
 	});
+
+	// check if the username entered for the new user already exists, if yes the 'add button' will be disabled
+	$(document).ready(function()
+	{
+		$("#username").on('keyup blur', function()
+		{
+			let uname = $("#username").val();
+			
+			$.ajax(
+			{
+				url: 'http://localhost/cafeguymalary/src/controllers/adm/usernamexists.ctrl.php',
+				type: 'POST',
+				data: {uname:uname},
+				success: function(response)
+				{
+					if(response == 1)
+					{
+						$('#unameExists').show().text('Ce nom d\'utilisateur est déjà utilisé');
+						$('#sub-btn').prop('disabled', true);
+					}
+					else
+					{
+						$('#unameExists').hide();
+						$('#sub-btn').prop('disabled', false);
+					}
+				}
+			});
+		});
+	});
 </script>
