@@ -28,14 +28,14 @@
 
 				if($checkinDao->checkAlreadyEat($id_emp, $cur_date))
 				{
-					echo "<h3 class='person-name'>$fname <span>$lname</span></h3>";
+					echo "<strong class='checkin-denied-name'>$fname <span>$lname</span></strong>";
 					$audiopath = 'http://cafeguymalary.atalou.org/public/assets/audio/access_denied.mp3';
 				}
 				else
 				{
 					if($checkinDao->addEat($id_emp, $cur_time, $resto, $cur_date))
 					{
-						echo "<h3 class='person-name'>$fname <span>$lname</span></h3>";
+						echo "<strong class='checkin-granted-name'>$fname <span>$lname</span></strong>";
 						$audiopath = 'http://cafeguymalary.atalou.org/public/assets/audio/access_granted.mp3';
 					}
 				}
