@@ -90,7 +90,7 @@
 								</div>
 								<div class="form-group">
 									<label>Barcode</label>
-									<input id="barcode" name="barcode" type="text" class="form-control" required/>
+									<input id="barcode" name="barcode" type="number" class="form-control" required/>
 
 									<!-- div to display if barcode already exists -->
 									<div class="input-group mb-1 d-flex justify-content-between">
@@ -107,7 +107,7 @@
 							</div>
 							<div class="modal-footer">
 								<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
-								<button type="submit" class="btn btn-success">Add</button>
+								<button id="sub-btn" type="submit" class="btn btn-success">Add</button>
 							</div>
 						</form>
 					</div>

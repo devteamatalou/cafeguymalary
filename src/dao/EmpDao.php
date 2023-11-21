@@ -61,5 +61,13 @@
 
 			if($delemp_qry->rowCount() > 0 ) return true;
 		}
+
+		function checkBarcodeExists($barcode)
+		{
+			$barcodexists_qry = $this->Auth->prepare("SELECT `id` FROM `employee` WHERE `barcode` = :barcode");
+			$barcodexists_qry->execute([':barcode' => $barcode]);
+
+			if($barcodexists_qry->rowCount() > 0) return true;
+		}
 	}
 ?>
