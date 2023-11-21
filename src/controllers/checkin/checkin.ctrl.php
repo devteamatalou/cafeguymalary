@@ -19,28 +19,24 @@
 
 		if($checkinDao->checkUserExits($barcode))
 		{
-			// $exists_response = $checkinDao->checkUserExits($barcode);
-			// while($isexists = $exists_response->fetch(PDO::FETCH_OBJ))
-			// {
-				$id_emp = $checkinDao->employeeInfo($barcode)->id;
-				$fname = $checkinDao->employeeInfo($barcode)->prenom;
-				$lname = $checkinDao->employeeInfo($barcode)->nom;
-				$lname = strtoupper($lname);
+			$id_emp = $checkinDao->employeeInfo($barcode)->id;
+			$fname = $checkinDao->employeeInfo($barcode)->prenom;
+			$lname = $checkinDao->employeeInfo($barcode)->nom;
+			$lname = strtoupper($lname);
 
-				if($checkinDao->checkAlreadyEat($id_emp, $cur_date))
+			if($checkinDao->checkAlreadyEat($id_emp, $cur_date))
+			{
+				echo "<strong class='checkin-denied-name'>$fname <span>$lname</span></strong>";
+				$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_denied.mp3';
+			}
+			else
+			{
+				if($checkinDao->addEat($id_emp, $cur_time, $resto, $cur_date))
 				{
-					echo "<h3 class='person-name'>$fname <span>$lname</span></h3>";
-					$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_denied.mp3';
+					echo "<strong class='checkin-granted-name'>$fname <span>$lname</span></strong>";
+					$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_granted.mp3';
 				}
-				else
-				{
-					if($checkinDao->addEat($id_emp, $cur_time, $resto, $cur_date))
-					{
-						echo "<h3 class='person-name'>$fname <span>$lname</span></h3>";
-						$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_granted.mp3';
-					}
-				}
-			// }
+			}
 		}
 		else
 			$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/employeenotfound.mp3';

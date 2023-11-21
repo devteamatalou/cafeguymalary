@@ -300,10 +300,18 @@ body {
 	margin: 0;
 }
 
-h3 {
-	font-size: 35px;
+.checkin-granted-name {
+	font-size: 30px;
 	color: #0077b6;
 	font-weight: bold;
+	font-family: Verdana, Geneva, Tahoma;
+}
+
+.checkin-denied-name {
+	font-size: 30px;
+	color: #f02c2c;
+	font-weight: bold;
+	font-family: 'Signika', sans-serif;
 }
 
 .logout {
