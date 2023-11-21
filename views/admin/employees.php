@@ -90,7 +90,12 @@
 								</div>
 								<div class="form-group">
 									<label>Barcode</label>
-									<input name="barcode" type="text" class="form-control" required/>
+									<input id="barcode" name="barcode" type="text" class="form-control" required/>
+
+									<!-- div to display if barcode already exists -->
+									<div class="input-group mb-1 d-flex justify-content-between">
+										<div id="barcodeExists" class="text-danger"></div>
+									</div>
 								</div>
 								<div class="form-group">
 									<label>Gender</label>
@@ -155,6 +160,35 @@
 
 			// Set the selected option in the gender select based on the user's gender
 			$('#gender').val(gender);
+		});
+	});
+
+	// check if the Barcode entered for the new employee already exists, if yes the 'add button' will be disabled
+	$(document).ready(function()
+	{
+		$("#barcode").on('keyup blur', function()
+		{
+			let barcode = $("#barcode").val();
+			
+			$.ajax(
+			{
+				url: 'http://localhost/cafeguymalary/src/controllers/emp/barcodexists.ctrl.php',
+				type: 'POST',
+				data: {barcode:barcode},
+				success: function(response)
+				{
+					if(response == 1)
+					{
+						$('#barcodeExists').show().text('Username already exists');
+						$('#sub-btn').prop('disabled', true);
+					}
+					else
+					{
+						$('#barcodeExists').hide();
+						$('#sub-btn').prop('disabled', false);
+					}
+				}
+			});
 		});
 	});
 </script>
