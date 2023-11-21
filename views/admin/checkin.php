@@ -62,7 +62,6 @@
 		</footer>
 	</body>
 	
-	<!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 	<script src="../../public/assets/js/calendar/calendar.js"></script>
 	<script src="../../public/assets/js/time/runningtime.js"></script>
 </html>
@@ -137,7 +136,4 @@
 	function homeDisplay() {
 		$("#load-data").html("<div class='logout'><a id='bt-test' href='index.php'><img src='../../public/assets/img/back.png'></a></div>");
 	}
-	// function homeDisplay() {
-	// 	$("#load-data").html("<div class='logout'><img src='../../public/assets/img/deconnecter.png'><p><a id='bt-test' href='index.php'>Déconnexion</a></p></div>");
-	// }
 </script>
