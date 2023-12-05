@@ -1,69 +1,69 @@
 <?php
- session_start();
+session_start();
 
-	if(empty($_SESSION['admin']))
-		header('Location: login.php');
+if (empty($_SESSION['admin']))
+	header('Location: login.php');
 
-	include '../../vendor/autoload.php';
+include '../../vendor/autoload.php';
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
-		
-		<title>Checkin</title>
-		<link rel="stylesheet" href="../../public/assets/css/styles.css">
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-		<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
-		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-		<!-- google font -->
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600;700&display=swap">
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
+	<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
+	<title>Checkin</title>
+	<link rel="stylesheet" href="../../public/assets/css/styles.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+	<script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<!-- google font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Signika:wght@300;400;600;700&display=swap">
+</head>
 
-	<body style="background-color: #DEAD66;">
-		<header>
-			<!-- ------------- <CALENDAR> ----------------- -->
-			<div class="contain">
-				<div class="calendar">
-					<div id="js-month" class="calendar__month"></div>
-					<div id="js-day" class="calendar__day"></div>
-					<div id="time" class="calendar__time"></div>
-				</div>
+<body style="background-color: #DEAD66;">
+	<header>
+		<!-- ------------- <CALENDAR> ----------------- -->
+		<div class="contain">
+			<div class="calendar">
+				<div id="js-month" class="calendar__month"></div>
+				<div id="js-day" class="calendar__day"></div>
+				<div id="time" class="calendar__time"></div>
 			</div>
-			<!-- ------------- </CALENDAR> ----------------- -->
-			<div class="resto-logo">
-				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
-			</div>
-			<div class="restaurant-logo">
-				<h1>Les Délices D'Edelande Restaurant</h1>
-			</div>
-			<center>
-				<div id="load-data"></div>
-			</center>
-		</header>
+		</div>
+		<!-- ------------- </CALENDAR> ----------------- -->
+		<div class="resto-logo">
+			<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
+		</div>
+		<div class="restaurant-logo">
+			<h1>Les Délices D'Edelande Restaurant</h1>
+		</div>
+		<center>
+			<div id="load-data"></div>
+		</center>
+	</header>
 
-		<footer id="footer" style="background-color: #39302A;">
-			<div class="container">
-				<div class="copyright">
-					&copy; Copyright <strong><span>AAN</span></strong>
-				</div>
-				<div class="credits">
-					<span style="color: black; font-weight: 500;">DESIGN BY</span>&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #DCDCDC; font-weight: 700; font-size: 15px;">ATALOU MICRO SYSTEM</span></strong></strong>
-				</div>
+	<footer id="footer" style="background-color: #39302A;">
+		<div class="container">
+			<div class="copyright">
+				&copy; Copyright <strong><span>AAN</span></strong>
 			</div>
-		</footer>
-	</body>
-	
-	<script src="../../public/assets/js/calendar/calendar.js"></script>
-	<script src="../../public/assets/js/time/runningtime.js"></script>
+			<div class="credits">
+				<span style="color: black; font-weight: 500;">DESIGN BY</span>&nbsp;&nbsp;&nbsp;&nbsp;<strong><span style="color: #DCDCDC; font-weight: 700; font-size: 15px;">ATALOU MICRO SYSTEM</span></strong></strong>
+			</div>
+		</div>
+	</footer>
+</body>
+
+<script src="../../public/assets/js/calendar/calendar.js"></script>
+<script src="../../public/assets/js/time/runningtime.js"></script>
+
 </html>
 
 
@@ -101,9 +101,10 @@
 			$.ajax({
 				url: "../../src/controllers/checkin/checkin.ctrl.php",
 				type: "post",
-				data: {barcode: barcode},
-				success: function(result)
-				{
+				data: {
+					barcode: barcode
+				},
+				success: function(result) {
 					let renderedHtml = result.html;
 					var audioPath = result.audiopath;
 
