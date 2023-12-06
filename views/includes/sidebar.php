@@ -10,47 +10,35 @@
 		<!-- End Dashboard Nav -->
 
 		<!-- Start setion user nav -->
-		<?php
-		 if($_SESSION['admin']['id_role'] == 1):
-		?>
-				<li class="nav-item">
-					<a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
-						<i class="bi bi-person"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
-					</a>
-					<ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
-						</li>
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/delusers.php"><i class="bi bi-circle"></i><span>Deleted Users</span></a>
-						</li>
-					</ul>
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#user-nav" data-bs-toggle="collapse" href="#">
+				<i class="bi bi-person"></i><span>Users</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
 				</li>
-		<?php
-		 endif;
-		?>
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/delusers.php"><i class="bi bi-circle"></i><span>Deleted Users</span></a>
+				</li>
+			</ul>
+		</li>
 		<!-- End user Nav -->
 
 		<!-- Start section employee -->
-		<?php
-		 if($_SESSION['admin']['id_role'] == 1):
-		?>
-				<li class="nav-item">
-					<a class="nav-link collapsed" data-bs-target="#employe-nav" data-bs-toggle="collapse" href="#">
-						<i class="bi bi-person-workspace"></i><span>Employees</span><i class="bi bi-chevron-down ms-auto"></i>
-					</a>
-					<ul id="employe-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
-						</li>
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/delemployees.php"><i class="bi bi-circle"></i><span>Deleted Employees</span></a>
-						</li>
-					</ul>
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#employe-nav" data-bs-toggle="collapse" href="#">
+				<i class="bi bi-person-workspace"></i><span>Employees</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="employe-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
 				</li>
-		<?php
-		 endif;
-		?>
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/delemployees.php"><i class="bi bi-circle"></i><span>Deleted Employees</span></a>
+				</li>
+			</ul>
+		</li>
 		<!-- End section employee  -->
 
 		<!-- Start section chekin -->
@@ -67,25 +55,19 @@
 		<!-- End section chekin  -->
 
 		<!-- Start section report -->
-		<?php
-		 if($_SESSION['admin']['id_role'] == 1):
-		?>
-				<li class="nav-item">
-					<a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
-						<i class="bi bi-journal-album"></i><span>Report</span><i class="bi bi-chevron-down ms-auto"></i>
-					</a>
-					<ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/dailyrep.php"><i class="bi bi-circle"></i><span>Daily Report</span></a>
-						</li>
-						<li>
-							<a href="http://localhost/cafeguymalary/views/admin/globalrep.php"><i class="bi bi-circle"></i><span>Global Report</span></a>
-						</li>
-					</ul>
+		<li class="nav-item">
+			<a class="nav-link collapsed" data-bs-target="#reports-nav" data-bs-toggle="collapse" href="#">
+				<i class="bi bi-journal-album"></i><span>Report</span><i class="bi bi-chevron-down ms-auto"></i>
+			</a>
+			<ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/dailyrep.php"><i class="bi bi-circle"></i><span>Daily Report</span></a>
 				</li>
-		<?php
-		 endif;
-		?>
+				<li>
+					<a href="http://localhost/cafeguymalary/views/admin/globalrep.php"><i class="bi bi-circle"></i><span>Global Report</span></a>
+				</li>
+			</ul>
+		</li>
 		<!-- End section report -->
 
 		<!-- Start section Download APK -->
