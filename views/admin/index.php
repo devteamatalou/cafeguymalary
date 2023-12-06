@@ -9,6 +9,9 @@
 	if (empty($_SESSION['admin']))
 		header('Location: login.php');
 
+	if($_SESSION['admin']['id_role'] == 2)
+	 header('Location: checkin.php');
+
 	use src\dao\DashboardDao;
 	$dashDao = new DashboardDao();
 
