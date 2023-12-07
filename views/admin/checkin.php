@@ -121,7 +121,7 @@
 						});
 					}
 
-					setTimeout(homeDisplay, 20000);
+					setTimeout(homeDisplay, 10000);
 				}
 			});
 		});
