@@ -135,7 +135,14 @@
 	});
 
 	// the function to put default interface design
-	function homeDisplay() {
-		$("#load-data").html("<div class='logout'><a id='bt-test' href='index.php'><img src='../../public/assets/img/back.png'></a></div>");
+	function homeDisplay()
+	{
+		// Check if the user is a simple user based on the id_role value
+		let isSimpleUser = <?php echo ($_SESSION['admin']['id_role'] == 2) ? 'true' : 'false'; ?>;
+
+		// Set the appropriate href based on the user type
+		let hrefValue = isSimpleUser ? 'logout.php' : 'index.php';
+
+		$("#load-data").html("<div class='logout'><a id='bt-test' href='"+hrefValue+"'><img src='../../public/assets/img/back.png'></a></div>");
 	}
 </script>

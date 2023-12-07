@@ -301,14 +301,16 @@ body {
 }
 
 .checkin-granted-name {
-	font-size: 30px;
+	font-size: 40px;
+	margin-top: 10px;
 	color: #0077b6;
 	font-weight: bold;
 	font-family: Verdana, Geneva, Tahoma;
 }
 
 .checkin-denied-name {
-	font-size: 30px;
+	font-size: 40px;
+	margin-top: 10px;
 	color: #f02c2c;
 	font-weight: bold;
 	font-family: 'Signika', sans-serif;
