@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if(empty($_SESSION['admin']))
+	if(empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
 	include '../../vendor/autoload.php';
@@ -172,7 +172,7 @@
 			
 			$.ajax(
 			{
-				url: 'http://localhost/cafeguymalary/src/controllers/emp/barcodexists.ctrl.php',
+				url: 'http://localhost/cafeaan/src/controllers/emp/barcodexists.ctrl.php',
 				type: 'POST',
 				data: {barcode:barcode},
 				success: function(response)

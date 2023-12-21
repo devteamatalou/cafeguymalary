@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Login | Caféteria Guy Malary</title>
+		<title>Login | Caféteria Toussaint Louverture</title>
 		<link href="../../public/assets/css/styles.css" rel="stylesheet">
 
 		<!-- tab icon -->
@@ -21,10 +21,10 @@
 			</div>
 			<div class="item">
 				<form id="login" action="" method="post">
-					<p class="title-form"> <span>Login</span> | Restaurant Guy Malary</p>
+					<p class="title-form"> <span>Login</span> | Restaurant Toussaint Louverture</p>
 					<div class="input-group">
 						<span class="icon"><i class="bi bi-person"></i></span>
-						<input name="authuname" type="text" placeholder="Ex: Joe*****" require>
+						<input name="authuname" type="text" placeholder="Ex: user@123 require>
 					</div>
 					<div class="input-group">
 						<span class="icon"><i class="bi bi-lock"></i> </span>

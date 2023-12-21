@@ -2,7 +2,7 @@
 	<ul class="sidebar-nav" id="sidebar-nav">
 
 		<li class="nav-item">
-			<a class="nav-link" href="http://localhost/cafeguymalary/views/admin" style="margin-bottom: 30px;">
+			<a class="nav-link" href="http://localhost/cafeaan/views/admin" style="margin-bottom: 30px;">
 				<i class="bi bi-grid"></i>
 				<span>Dashboard</span>
 			</a>
@@ -16,10 +16,10 @@
 			</a>
 			<ul id="user-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
+					<a href="http://localhost/cafeaan/views/admin/users.php"><i class="bi bi-circle"></i><span>List Users</span></a>
 				</li>
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/delusers.php"><i class="bi bi-circle"></i><span>Deleted Users</span></a>
+					<a href="http://localhost/cafeaan/views/admin/delusers.php"><i class="bi bi-circle"></i><span>Deleted Users</span></a>
 				</li>
 			</ul>
 		</li>
@@ -32,10 +32,10 @@
 			</a>
 			<ul id="employe-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
+					<a href="http://localhost/cafeaan/views/admin/employees.php"><i class="bi bi-circle"></i><span>List Employees</span></a>
 				</li>
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/delemployees.php"><i class="bi bi-circle"></i><span>Deleted Employees</span></a>
+					<a href="http://localhost/cafeaan/views/admin/delemployees.php"><i class="bi bi-circle"></i><span>Deleted Employees</span></a>
 				</li>
 			</ul>
 		</li>
@@ -48,7 +48,7 @@
 			</a>
 			<ul id="checkin-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/checkin.php"><i class="bi bi-circle"></i><span>Go to Cafeteria</span></a>
+					<a href="http://localhost/cafeaan/views/admin/checkin.php"><i class="bi bi-circle"></i><span>Go to Cafeteria</span></a>
 				</li>
 			</ul>
 		</li>
@@ -61,10 +61,10 @@
 			</a>
 			<ul id="reports-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/dailyrep.php"><i class="bi bi-circle"></i><span>Daily Report</span></a>
+					<a href="http://localhost/cafeaan/views/admin/dailyrep.php"><i class="bi bi-circle"></i><span>Daily Report</span></a>
 				</li>
 				<li>
-					<a href="http://localhost/cafeguymalary/views/admin/globalrep.php"><i class="bi bi-circle"></i><span>Global Report</span></a>
+					<a href="http://localhost/cafeaan/views/admin/globalrep.php"><i class="bi bi-circle"></i><span>Global Report</span></a>
 				</li>
 			</ul>
 		</li>
@@ -77,14 +77,14 @@
 			</a>
 			<ul id="apk-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeguymalary/public/assets/apk/guymalarycafe2.apk" download><i class="bi bi-circle"></i><span>Download APK</span></a>
+					<a href="http://localhost/cafeaan/public/assets/apk/guymalarycafe2.apk" download><i class="bi bi-circle"></i><span>Download APK</span></a>
 				</li>
 			</ul>
 		</li>
 		<!-- End section Download APK -->
 
-		<p style="margin-top: 50px; text-align: center;">
-			<img width="100" height="150" src="http://localhost/cafeguymalary/public/assets/img/female-chef.png" alt="">
+		<p style="margin-top: 5px; text-align: center;">
+			<img width="150" height="200" src="http://localhost/cafeaan/public/assets/img/male-chef.png" alt="">
 		</p>
 	</ul>
 </aside><!-- End Sidebar-->

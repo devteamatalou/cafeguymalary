@@ -12,7 +12,7 @@ $(document).ready(() => {
 		}).then((willDelete) => {
 			if (willDelete) {
 				$.ajax({
-					url: 'http://localhost/cafeguymalary/src/controllers/emp/deletemp.ctrl.php',
+					url: 'http://localhost/cafeaan/src/controllers/emp/deletemp.ctrl.php',
 					type: "POST",
 					dataType: 'json',
 					data: { id: id },

@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if (empty($_SESSION['admin']))
+	if (empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
 	include '../../vendor/autoload.php';
@@ -12,8 +12,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="icon">
-		<link href="http://localhost/cafeguymalary/public/assets/img/logo_resto.png" rel="apple-touch-icon">
+		<link href="http://localhost/cafeaan/public/assets/img/logo_resto.png" rel="icon">
+		<link href="http://localhost/cafeaan/public/assets/img/logo_resto.png" rel="apple-touch-icon">
 		<title>Checkin</title>
 		<link rel="stylesheet" href="../../public/assets/css/styles.css">
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
@@ -41,7 +41,7 @@
 				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
 			</div>
 			<div class="restaurant-logo">
-				<h1>Les Délices D'Edelande Restaurant</h1>
+				<h1>Gloria Catering</h1>
 			</div>
 			<center>
 				<div id="load-data"></div>
@@ -74,14 +74,14 @@
 		clean: true,
 		connectTimeout: 10000,
 		// Authentication
-		clientId: 'emqx_guymalary',
-		username: 'emqx_guymalary',
-		password: 'emqx_guymalary',
+		clientId: 'emqx_aan',
+		username: 'emqx_aan',
+		password: 'emqx_aan',
 	}
 
 	const client = mqtt.connect(url, options);
 	client.on('connect', function() {
-		var topic = 'guymalary';
+		var topic = 'aan';
 		console.log('Connected');
 		// Subscribe to a topic
 		client.subscribe(topic, function(err) {});
@@ -135,7 +135,7 @@
 	function homeDisplay()
 	{
 	 // Check if the user is a simple user based on the id_role value
-		let isSimpleUser = <?php echo ($_SESSION['admin']['id_role'] == 2) ? 'true' : 'false'; ?>;
+		let isSimpleUser = <?php echo ($_SESSION['admin_aan']['id_role'] == 2) ? 'true' : 'false'; ?>;
 
 		// Set the appropriate href based on the user type
 		let hrefValue = isSimpleUser ? 'logout.php' : 'index.php';

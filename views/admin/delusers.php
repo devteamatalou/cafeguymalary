@@ -1,7 +1,7 @@
 <?php
 	session_start();
 
-	if(empty($_SESSION['admin']))
+	if(empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
 	include '../../vendor/autoload.php';

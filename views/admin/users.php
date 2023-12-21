@@ -1,14 +1,14 @@
 <?php
 	session_start();
 
-	if(empty($_SESSION['admin']))
+	if(empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
 	include '../../vendor/autoload.php';
 
 	use src\dao\UserDao;
 	$userdao = new UserDao();
-	$select_all_users = $userdao->selectAllUsers($_SESSION['admin']['id']);
+	$select_all_users = $userdao->selectAllUsers($_SESSION['admin_aan']['id']);
 
 	$allroles_stmt = $userdao->selectAllRoles();
 
@@ -179,7 +179,7 @@
 			
 			$.ajax(
 			{
-				url: 'http://localhost/cafeguymalary/src/controllers/adm/usernamexists.ctrl.php',
+				url: 'http://localhost/cafeaan/src/controllers/adm/usernamexists.ctrl.php',
 				type: 'POST',
 				data: {uname:uname},
 				success: function(response)

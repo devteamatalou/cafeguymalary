@@ -5,7 +5,7 @@ $(document).ready(() => {
 		var dataForm = $('#addemp')[0];
 		var formData = new FormData(dataForm);
 		$.ajax({
-			url: 'http://localhost/cafeguymalary/src/controllers/emp/addemp.ctrl.php',
+			url: 'http://localhost/cafeaan/src/controllers/emp/addemp.ctrl.php',
 			type: "POST",
 			dataType: 'script',
 			cache: false,
@@ -30,7 +30,7 @@ $(document).ready(() => {
 						},
 						callback: function()
 						{
-							window.location = "http://localhost/cafeguymalary/views/admin/";
+							window.location = "http://localhost/cafeaan/views/admin/";
 						}
 					}).showToast();
 

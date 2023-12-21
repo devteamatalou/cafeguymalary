@@ -7,27 +7,27 @@
 		<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 		<!-- Form Js links -->
-		<script src="http://localhost/cafeguymalary/public/assets/js/adm/adduser.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/adm/edituser.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/adm/deleteuser.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/adm/restoreuser.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/emp/addemp.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/emp/editemp.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/emp/deletemp.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/emp/restoremp.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/adm/adduser.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/adm/edituser.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/adm/deleteuser.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/adm/restoreuser.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/emp/addemp.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/emp/editemp.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/emp/deletemp.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/emp/restoremp.js"></script>
 
 		<!-- Js link for running time -->
-		<script src="http://localhost/cafeguymalary/public/assets/js/time/runningtime.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/time/runningtime.js"></script>
 
 		<!-- Vendor JS Files -->
-		<script src="http://localhost/cafeguymalary/public/vendor/apexcharts/apexcharts.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/chart.js/chart.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/echarts/echarts.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/quill/quill.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/simple-datatables/simple-datatables.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/tinymce/tinymce.min.js"></script>
-		<script src="http://localhost/cafeguymalary/public/vendor/php-email-form/validate.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/apexcharts/apexcharts.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/chart.js/chart.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/echarts/echarts.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/quill/quill.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/simple-datatables/simple-datatables.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/tinymce/tinymce.min.js"></script>
+		<script src="http://localhost/cafeaan/public/vendor/php-email-form/validate.js"></script>
 
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 
@@ -39,8 +39,8 @@
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/dataTables.responsive.min.js"></script>
 		<script src="https://cdn.datatables.net/responsive/2.4.1/js/responsive.bootstrap.min.js"></script>
 		<!--JS File -->
-		<script src="http://localhost/cafeguymalary/public/assets/js/main.js"></script>
-		<script src="http://localhost/cafeguymalary/public/assets/js/app.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/main.js"></script>
+		<script src="http://localhost/cafeaan/public/assets/js/app.js"></script>
 
 		<link href="https://cdn.datatables.net/buttons/2.3.6/css/buttons.bootstrap5.min.css" rel="stylesheet" />
 		<link href="https://cdn.datatables.net/datetime/1.4.0/css/dataTables.dateTime.min.css" rel="stylesheet" />

@@ -12,7 +12,7 @@ $(document).ready(() => {
 		}).then((willDelete) => {
 			if (willDelete) {
 				$.ajax({
-					url: 'http://localhost/cafeguymalary/src/controllers/adm/restoreuser.ctrl.php',
+					url: 'http://localhost/cafeaan/src/controllers/adm/restoreuser.ctrl.php',
 					type: "POST",
 					dataType: 'json',
 					data: { id: id },

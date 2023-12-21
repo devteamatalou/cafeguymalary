@@ -7,7 +7,7 @@
 	date_default_timezone_set("America/Port-Au-Prince");
 	$cur_date = date("l, d M Y");
 	$cur_time = date('h:i:s a');
-	$resto = 'GUY MALARY';
+	$resto = 'TOUSSAINT LOUVERTURE';
 
  $audiopath = '';
 
@@ -27,19 +27,19 @@
 			if($checkinDao->checkAlreadyEat($id_emp, $cur_date))
 			{
 				echo "<strong class='checkin-denied-name'>$fname <span>$lname</span></strong>";
-				$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_denied.mp3';
+				$audiopath = 'http://localhost/cafeaan/public/assets/audio/access_denied.mp3';
 			}
 			else
 			{
 				if($checkinDao->addEat($id_emp, $cur_time, $resto, $cur_date))
 				{
 					echo "<strong class='checkin-granted-name'>$fname <span>$lname</span></strong>";
-					$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/access_granted.mp3';
+					$audiopath = 'http://localhost/cafeaan/public/assets/audio/access_granted.mp3';
 				}
 			}
 		}
 		else
-			$audiopath = 'http://localhost/cafeguymalary/public/assets/audio/employeenotfound.mp3';
+			$audiopath = 'http://localhost/cafeaan/public/assets/audio/employeenotfound.mp3';
 
 	}
 

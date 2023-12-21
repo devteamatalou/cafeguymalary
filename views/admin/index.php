@@ -3,16 +3,16 @@
 
 	include '../../vendor/autoload.php';
 
-	if (empty($_SESSION['admin']))
+	if (empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
-	if($_SESSION['admin']['id_role'] == 2)
+	if($_SESSION['admin_aan']['id_role'] == 2)
 	 header('Location: checkin.php');
 
 		use src\dao\DashboardDao;
 		$dashDao = new DashboardDao();
 
-		$resto = 'GUY MALARY';
+		$resto = 'TOUSSAINT LOUVERTURE';
 		date_default_timezone_set('America/Port-Au-Prince');
 		$cur_date = date('l, d M Y');
 
@@ -24,7 +24,6 @@
 	<main style="height: 90vh; margin-bottom: 0;" id="main" class="main">
 		<div class="pagetitle">
 			<!-- <h1>Dashboard</h1> -->
-			<nav>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Home</a></li>
 					<li class="breadcrumb-item active">Dashboard</li>

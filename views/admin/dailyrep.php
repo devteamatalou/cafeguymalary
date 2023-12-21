@@ -1,12 +1,12 @@
 <?php
 	session_start();
 
-	if(empty($_SESSION['admin']))
+	if(empty($_SESSION['admin_aan']))
 		header('Location: login.php');
 
 		include '../../vendor/autoload.php';
 
-		$resto = 'GUY MALARY';
+		$resto = 'TOUSSAINT LOUVERTURE';
 		date_default_timezone_set('America/Port-Au-Prince');
 		$cur_date = date('l, d M Y');
 

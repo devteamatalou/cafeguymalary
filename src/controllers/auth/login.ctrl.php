@@ -17,7 +17,7 @@
 
 		if ($log->isExists($authUname) && $log->validPassword($authUname, $authPass))
 		{
-			$_SESSION['admin'] = array(
+			$_SESSION['admin_aan'] = array(
 				'id' => $log->userInfo($authUname)->id,
 				'id_role' => $log->userInfo($authUname)->id_role,
 				'username' => $log->userInfo($authUname)->username,
