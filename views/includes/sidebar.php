@@ -77,7 +77,7 @@
 			</a>
 			<ul id="apk-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
 				<li>
-					<a href="http://localhost/cafeaan/public/assets/apk/guymalarycafe2.apk" download><i class="bi bi-circle"></i><span>Download APK</span></a>
+					<a href="http://localhost/cafeaan/public/assets/apk/cafeaan2.apk" download><i class="bi bi-circle"></i><span>Download APK</span></a>
 				</li>
 			</ul>
 		</li>
