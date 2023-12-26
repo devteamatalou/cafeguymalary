@@ -41,7 +41,7 @@
 				<img src="../../public/assets/img/logo_resto.png" alt="Restaurant Logo">
 			</div>
 			<div class="restaurant-logo">
-				<h1>Gloria Catering</h1>
+				<h1>Gloria Catering Restaurant</h1>
 			</div>
 			<center>
 				<div id="load-data"></div>
